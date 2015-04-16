@@ -1,0 +1,21 @@
+[submodule "ljswitchboard-builder"]
+	path = ljswitchboard-builder
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-builder
+[submodule "ljswitchboard-core"]
+	path = ljswitchboard-core
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-core
+[submodule "ljswitchboard-io_manager"]
+	path = ljswitchboard-io_manager
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-io_manager
+[submodule "ljswitchboard-kipling"]
+	path = ljswitchboard-kipling
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-kipling
+[submodule "ljswitchboard-ljm_driver_checker"]
+	path = ljswitchboard-ljm_driver_checker
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-ljm_driver_checker
+[submodule "ljswitchboard-module_manager"]
+	path = ljswitchboard-module_manager
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-module_manager
+[submodule "ljswitchboard-static_files"]
+	path = ljswitchboard-static_files
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-static_files
