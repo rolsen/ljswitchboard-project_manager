@@ -1,0 +1,123 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"./run.sh"
+			],
+			"name": "List",
+			"working_dir": "${project_path:${folder}}"
+		}
+	],
+	"files":
+	[
+		{
+			"file_exclude_parameters":
+			[
+			],
+			"folder_exclude_parameters":
+			[
+				"node_modules"
+			],
+			"name": "Settings",
+			"path": "./kipling.sublime-project"
+		},
+		{
+			"file_exclude_parameters":
+			[
+			],
+			"folder_exclude_parameters":
+			[
+				"node_modules"
+			],
+			"name": "Runner",
+			"path": "./run.sh"
+		}
+	],
+	"folders":
+	[
+		{
+			"name": "root",
+			"path": "./"
+		},
+		{
+			"name": "LabJack-nodejs",
+			"path": "LabJack-nodejs"
+		},
+		{
+			"name": "Builder",
+			"path": "ljswitchboard-builder"
+		},
+		{
+			"name": "Core",
+			"path": "ljswitchboard-core"
+		},
+		{
+			"name": "Data Parser",
+			"path": "ljswitchboard-data_parser"
+		},
+		{
+			"name": "Device Scanner",
+			"path": "ljswitchboard-device_scanner"
+		},
+		{
+			"name": "IO Manager",
+			"path": "ljswitchboard-io_manager"
+		},
+		{
+			"name": "Kipling",
+			"path": "ljswitchboard-kipling"
+		},
+		{
+			"name": "Kipling Tester",
+			"path": "ljswitchboard-kipling_tester"
+		},
+		{
+			"name": "Device Curator",
+			"path": "ljswitchboard-ljm_device_curator"
+		},
+		{
+			"name": "Driver Checker",
+			"path": "ljswitchboard-ljm_driver_checker"
+		},
+		{
+			"name": "Driver Constants",
+			"path": "ljswitchboard-ljm_driver_constants"
+		},
+		{
+			"name": "Process Manager",
+			"path": "LabJack-process_manager"
+		},
+		{
+			"name": "Modbus Map",
+			"path": "ljswitchboard-modbus_map"
+		},
+		{
+			"name": "Module Manager",
+			"path": "ljswitchboard-module_manager"
+		},
+		{
+			"name": "Package Loader",
+			"path": "ljswitchboard-package_loader"
+		},
+		{
+			"name": "Require",
+			"path": "ljswitchboard-require"
+		},
+		{
+			"name": "Static Files",
+			"path": "ljswitchboard-static_files"
+		},
+		{
+			"name": "Window Manager",
+			"path": "ljswitchboard-window_manager"
+		}
+	],
+	"settings":
+	[
+		{
+			"tab_size": 4
+		}
+	]
+}
