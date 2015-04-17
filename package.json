@@ -1,0 +1,20 @@
+{
+  "name": "ljswitchboard-project_manager",
+  "version": "0.0.1",
+  "description": "A project to help developers of LabJack's \"Kipling\" program.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "node setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/rolsen/ljswitchboard-project_manager"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolsen/ljswitchboard-project_manager/issues"
+  },
+  "homepage": "https://github.com/rolsen/ljswitchboard-project_manager"
+}
