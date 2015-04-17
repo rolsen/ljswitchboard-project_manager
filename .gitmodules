@@ -19,3 +19,36 @@
 [submodule "ljswitchboard-static_files"]
 	path = ljswitchboard-static_files
 	url = ssh://git@github.com/chrisJohn404/ljswitchboard-static_files
+[submodule "LabJack-nodejs"]
+	path = LabJack-nodejs
+	url = ssh://git@github.com/chrisJohn404/LabJack-nodejs
+[submodule "ljswitchboard-data_parser"]
+	path = ljswitchboard-data_parser
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-data_parser
+[submodule "ljswitchboard-device_scanner"]
+	path = ljswitchboard-device_scanner
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-device_scanner
+[submodule "ljswitchboard-kipling_tester"]
+	path = ljswitchboard-kipling_tester
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-kipling_tester
+[submodule "ljswitchboard-ljm_device_curator"]
+	path = ljswitchboard-ljm_device_curator
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-ljm_device_curator
+[submodule "ljswitchboard-ljm_driver_constants"]
+	path = ljswitchboard-ljm_driver_constants
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-ljm_driver_constants
+[submodule "LabJack-process_manager"]
+	path = LabJack-process_manager
+	url = ssh://git@github.com/chrisJohn404/LabJack-process_manager
+[submodule "ljswitchboard-modbus_map"]
+	path = ljswitchboard-modbus_map
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-modbus_map
+[submodule "ljswitchboard-package_loader"]
+	path = ljswitchboard-package_loader
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-package_loader
+[submodule "ljswitchboard-require"]
+	path = ljswitchboard-require
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-require
+[submodule "ljswitchboard-window_manager"]
+	path = ljswitchboard-window_manager
+	url = ssh://git@github.com/chrisJohn404/ljswitchboard-window_manager
