@@ -38,10 +38,6 @@
 	"folders":
 	[
 		{
-			"name": "root",
-			"path": "./"
-		},
-		{
 			"name": "LabJack-nodejs",
 			"path": "LabJack-nodejs"
 		},
@@ -112,6 +108,10 @@
 		{
 			"name": "Window Manager",
 			"path": "ljswitchboard-window_manager"
+		},
+		{
+			"name": "root",
+			"path": "./"
 		}
 	],
 	"settings":
