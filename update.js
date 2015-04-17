@@ -21,9 +21,9 @@ var NODE_VERSION = 'v1.2.0';
 var NWJS_VERSION = '0.12.1';
 
 
-// It is required that io.js version 1.2.0 is installed
-if(process.version !== NODE_VERSION) {
-	console.log('Please install node/io.js version:', NODE_VERSION);
+// It is required that anode/io.js version with child_process.execSync implemented
+if(typeof(child_process.execSync) !== 'function') {
+	console.log('Please install a version of node/io.js with child_process.execSync');
 	process.exit();
 }
 
