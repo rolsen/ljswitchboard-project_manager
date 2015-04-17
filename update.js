@@ -48,7 +48,7 @@ var installationStates = [];
 currentFolders.forEach(function(folder) {
 	installationStates.push({
 		'folder': folder,
-		'isInstalled': false,
+		'isUpdated': false,
 		'isDeduped': false,
 		'isFinished': false,
 		'isSuccessful': false
@@ -72,7 +72,7 @@ function printStatus() {
 		for(var i = 0; i < numExtraSpaces; i++) {
 			message += ' ';
 		}
-		message += '\t| ' + install.isInstalled.toString();
+		message += '\t| ' + install.isUpdated.toString();
 		message += '\t| ' + install.isDeduped.toString();
 		message += '\t| ' + install.isSuccessful.toString();
 		message += '\t| ' + install.isFinished.toString();
@@ -89,7 +89,7 @@ function printStatus() {
 	for(var i = 0; i < (minSize - headerLen); i++) {
 		headerMessage += ' ';
 	}
-	headerMessage += '\t| inst.';
+	headerMessage += '\t| updat';
 	headerMessage += '\t| dedup';
 	headerMessage += '\t| succ';
 	headerMessage += '\t| fin';
@@ -104,8 +104,8 @@ function updateStatus(name, options) {
 			if(typeof(options.isFinished) !== 'undefined') {
 				install.isFinished = options.isFinished;
 			}
-			if(typeof(options.isInstalled) !== 'undefined') {
-				install.isInstalled = options.isInstalled;
+			if(typeof(options.isUpdated) !== 'undefined') {
+				install.isUpdated = options.isUpdated;
 			}
 			if(typeof(options.isDeduped) !== 'undefined') {
 				install.isDeduped = options.isDeduped;
@@ -130,8 +130,8 @@ currentFolders.forEach(function(folder) {
 	// console.log('Processing: ', folder);
 	// console.log('  - Installing');
 	try {
-		var installOutput = child_process.execSync('npm install');
-		updateStatus(folder, {isInstalled: true});
+		var installOutput = child_process.execSync('npm update');
+		updateStatus(folder, {isUpdated: true});
 		// console.log('  - Deduping');
 		var dedupeOutput = child_process.execSync('npm dedupe');
 		updateStatus(folder, {isDeduped: true, isSuccessful: true, isFinished: true});
@@ -143,21 +143,6 @@ currentFolders.forEach(function(folder) {
 	// Navigate back to the starting directory
 	process.chdir(startingDir);
 });
-
-// Install node-webkit
-console.log('Installing nw version:', NWJS_VERSION);
-var startingDir = process.cwd();
-var builderDir = path.join(startingDir, 'ljswitchboard-builder');
-process.chdir(builderDir);
-try {
-	var nwInstallOut = child_process.execSync('npm install nw@' + NWJS_VERSION);
-	console.log('Successfully installed nw');
-} catch(err) {
-	console.log('Error Installing nw');
-}
-process.chdir(startingDir);
-
-
 
 } catch(err) {
 	console.error('Error', err);
