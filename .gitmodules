@@ -52,3 +52,6 @@
 [submodule "ljswitchboard-window_manager"]
 	path = ljswitchboard-window_manager
 	url = https://github.com/chrisJohn404/ljswitchboard-window_manager
+[submodule "ljswitchboard-splash_screen"]
+	path = ljswitchboard-splash_screen
+	url = https://github.com/chrisJohn404/ljswitchboard-splash_screen
