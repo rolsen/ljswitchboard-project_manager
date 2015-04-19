@@ -46,6 +46,10 @@
 			"path": "ljswitchboard-builder"
 		},
 		{
+			"name": "Splash Screen",
+			"path": "ljswitchboard-splash_screen"
+		},
+		{
 			"name": "Core",
 			"path": "ljswitchboard-core"
 		},
