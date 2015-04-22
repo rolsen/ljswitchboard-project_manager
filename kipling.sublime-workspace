@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"gl",
+				"GLOBAL_SUBPROCESS_REFERENCE"
+			],
+			[
+				"window",
+				"window_manager"
+			],
+			[
 				"packe",
 				"packetData"
 			],
@@ -506,14 +514,6 @@
 			[
 				"newB",
 				"newBufferedValues"
-			],
-			[
-				"cu",
-				"curVal"
-			],
-			[
-				"title",
-				"titleAppend"
 			]
 		]
 	},
@@ -552,6 +552,16 @@
 	},
 	"file_history":
 	[
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-splash_screen/lib/get_cwd.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-kipling_tester/lib/index.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-splash_screen/package.json",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/LabJack-process_manager/lib/slave_process.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/LabJack-process_manager/lib/master_process.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-kipling/lib/js/module_chrome.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-splash_screen/lib/index.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-kipling/lib/index.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-window_manager/lib/window_manager.js",
+		"/Users/chrisjohnson/git/ljswitchboard-project_manager/ljswitchboard-io_manager/lib/io_interface.js",
 		"/Users/chrisjohnson/git/kipling/kipling.sublime-project",
 		"/Users/chrisjohnson/git/kipling/ljswitchboard-device_scanner/lib/device_scanner.js",
 		"/Users/chrisjohnson/git/kipling/run.sh",
@@ -669,17 +679,7 @@
 		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_overview/controller.js",
 		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/deploy/switchboard_modules/device_overview/controller.js",
 		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_overview/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/lib/labjack_nodejs.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/lib/device.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/lib/driver.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/node_modules/ffi/lib/ffi.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/node_modules/ref/package.json",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/node_modules/ffi/node_modules/ref-struct/node_modules/ref/package.json",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/node_modules/ffi/node_modules/ref-struct/package.json",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/analog_inputs_fw/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/dashboard/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/dashboard/resources/dio.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/register_matrix/table_list.html"
+		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/labjack-nodejs/lib/labjack_nodejs.js"
 	],
 	"find":
 	{
@@ -704,6 +704,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ioManagerMonitor",
+			"createNewMessageManager",
+			"eventList",
+			"QUITTING_APPLICATION",
+			"eventList",
+			"createWindowManager",
+			"ALL_WINDOWS_CLOSED",
+			"startIOManager",
+			"cwd",
+			"linux",
 			"thermocoupleCJCRegisters",
 			"numBytes",
 			"dataToAppendToSource",
@@ -821,17 +831,7 @@
 			"this.getManualVal",
 			"getManualVal",
 			"updateEthernetSettings",
-			"updateIPSettings",
-			"'placeholder",
-			"ipAddressValidator",
-			"efConfig-SELECT",
-			"efConfig-INPUT",
-			"ipAddressValidator",
-			"getToggleVal",
-			"getInputVal",
-			"placeholder",
-			"configureModuleContext",
-			"getIPRegisters"
+			"updateIPSettings"
 		],
 		"highlight": true,
 		"in_selection": false,

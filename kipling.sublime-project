@@ -38,16 +38,16 @@
 	"folders":
 	[
 		{
+			"name": "Splash Screen",
+			"path": "ljswitchboard-splash_screen"
+		},
+		{
 			"name": "LabJack-nodejs",
 			"path": "LabJack-nodejs"
 		},
 		{
 			"name": "Builder",
 			"path": "ljswitchboard-builder"
-		},
-		{
-			"name": "Splash Screen",
-			"path": "ljswitchboard-splash_screen"
 		},
 		{
 			"name": "Core",
@@ -115,7 +115,7 @@
 		},
 		{
 			"name": "root",
-			"path": "./"
+			"path": "/Users/chrisjohnson/git/ljswitchboard-project_manager"
 		}
 	],
 	"settings":
