@@ -94,6 +94,10 @@
 			"path": "ljswitchboard-modbus_map"
 		},
 		{
+			"name": "Modules",
+			"path": "ljswitchboard-module_manager/lib/switchboard_modules"
+		},
+		{
 			"name": "Module Manager",
 			"path": "ljswitchboard-module_manager"
 		},
@@ -114,8 +118,16 @@
 			"path": "ljswitchboard-window_manager"
 		},
 		{
+			"name": "LabJack LJM (win)",
+			"path": "/C/ProgramData/LabJack/LJM"
+		},
+		{
+			"name": "LabJack LJM (unix)",
+			"path": "/usr/local/share/LabJack/LJM"
+		},
+		{
 			"name": "root",
-			"path": "/Users/chrisjohnson/git/ljswitchboard-project_manager"
+			"path": "./"
 		}
 	],
 	"settings":
