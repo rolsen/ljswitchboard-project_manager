@@ -8,7 +8,8 @@
     "setup": "node setup.js",
     "update": "node update.js",
     "start": "echo \"Error: no start specified\" && exit 1",
-    "checkout_master": "node checkout_master.js"
+    "checkout_master": "node checkout_master.js",
+    "git_pull": "node git_pull.js"
   },
   "repository": {
     "type": "git",
