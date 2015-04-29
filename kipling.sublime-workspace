@@ -4,6 +4,70 @@
 		"selected_items":
 		[
 			[
+				"data",
+				"dataTableData"
+			],
+			[
+				"draw",
+				"drawCallback"
+			],
+			[
+				"mini",
+				"minified"
+			],
+			[
+				"expa",
+				"expandedRegister"
+			],
+			[
+				"regi",
+				"registerAddresses"
+			],
+			[
+				"expandedRe",
+				"expandedRegisterNames"
+			],
+			[
+				"expand",
+				"expandedRegisters"
+			],
+			[
+				"cached",
+				"cachedRegisterDataTableKeys"
+			],
+			[
+				"lj",
+				"ljmmm_parse"
+			],
+			[
+				"update",
+				"updateCachedRegisterData"
+			],
+			[
+				"act",
+				"activeDevice"
+			],
+			[
+				"invalidate",
+				"invalidateCacheFile"
+			],
+			[
+				"display",
+				"display_methods"
+			],
+			[
+				"displa",
+				"displayData"
+			],
+			[
+				"module",
+				"module_manager"
+			],
+			[
+				"save",
+				"saveModuleStartupData"
+			],
+			[
 				"ex",
 				"execSync"
 			],
@@ -102,10 +166,6 @@
 			[
 				"nomin",
 				"nominalVal"
-			],
-			[
-				"cached",
-				"cachedCalibrationValidity"
 			],
 			[
 				"network",
@@ -454,100 +514,40 @@
 			[
 				"reg",
 				"register"
-			],
-			[
-				"REGISTER_WA",
-				"REGISTER_WATCHLIST_EMPTY_SELECTOR"
-			],
-			[
-				"file",
-				"fileLocation"
-			],
-			[
-				"defined",
-				"defined"
-			],
-			[
-				"name",
-				"name"
-			],
-			[
-				"unitRe",
-				"unitRegName"
-			],
-			[
-				"newE",
-				"newEFData"
-			],
-			[
-				"read",
-				"readReg"
-			],
-			[
-				"analogInputs",
-				"analogInputsDict"
-			],
-			[
-				"clearC",
-				"clearCachedData"
-			],
-			[
-				"range",
-				"rangeVal"
-			],
-			[
-				"rang",
-				"rangeVal"
-			],
-			[
-				"raw",
-				"rawVal"
-			],
-			[
-				"newB",
-				"newBufferedValues"
-			],
-			[
-				"cu",
-				"curVal"
-			],
-			[
-				"title",
-				"titleAppend"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "ljswitchboard-module_manager/lib/switchboard_modules/analog_outputs_fw/controller.js",
-			"settings":
-			{
-				"buffer_size": 12062,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/controller.js",
 			"settings":
 			{
-				"buffer_size": 5720,
+				"buffer_size": 23586,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/module.json",
+			"file": "/C/ProgramData/LabJack/LJM/ljm_constants.json",
 			"settings":
 			{
-				"buffer_size": 236,
+				"buffer_size": 130988,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ljswitchboard-modbus_map/lib/json_constants_parser.js",
+			"settings":
+			{
+				"buffer_size": 10206,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix/module.json",
+			"file": "ljswitchboard-modbus_map/package.json",
 			"settings":
 			{
-				"buffer_size": 261,
+				"buffer_size": 1024,
 				"line_ending": "Windows"
 			}
 		},
@@ -555,31 +555,23 @@
 			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/view.html",
 			"settings":
 			{
-				"buffer_size": 618,
+				"buffer_size": 965,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ljswitchboard-kipling/lib/index.html",
+			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/group_row.html",
 			"settings":
 			{
-				"buffer_size": 4015,
+				"buffer_size": 64,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix/controller.js",
+			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/module.json",
 			"settings":
 			{
-				"buffer_size": 40065,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/data_init.json",
-			"settings":
-			{
-				"buffer_size": 155,
+				"buffer_size": 258,
 				"line_ending": "Windows"
 			}
 		}
@@ -616,13 +608,34 @@
 	},
 	"file_history":
 	[
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-modbus_map/package.json",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-modbus_map/lib/json_constants_parser.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/analog_outputs_fw/view.html",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix/controller.js",
+		"/C/ProgramData/LabJack/LJM/ljm_constants.json",
+		"/C/Users/chris/git/LabJack/pm/ljmmm-parse/test/ljmmm_test.js",
+		"/C/Users/chris/git/LabJack/pm/ljmmm-parse/lib/ljmmm.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-kipling/lib/index.html",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/view.html",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/ljswitchboard-module_manager.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/data_init.json",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/controller.js",
+		"/C/Users/chris/git/LabJack/pm/.gitmodules",
+		"/C/Users/chris/git/LabJack/pm/ljmmm-parse/package.json",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-modbus_map/node_modules/ljmmm-parse/lib/ljmmm.js",
+		"/C/Users/chris/git/LabJack/pm/kipling.sublime-project",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/framework/kipling-module-framework/presenter_framework.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/framework/kipling-module-framework/framework_connector.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/analog_outputs_fw/controller.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix/module.json",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/module.json",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-splash_screen/package.json",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-kipling/lib/js/module_loader.js",
+		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/test/test.js",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/device_selector/controller.js",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/modules.json",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-kipling_tester/lib/index.js",
-		"/C/Users/chris/git/LabJack/pm/ljswitchboard-splash_screen/package.json",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-kipling_tester/test/mock_module_tests/mock_register_matrix.js",
-		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/data_init.json",
-		"/C/Users/chris/git/LabJack/pm/kipling.sublime-project",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/lua_script_debugger/style.css",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/lua_script_debugger/controller.js",
 		"/C/Users/chris/git/LabJack/pm/ljswitchboard-module_manager/lib/switchboard_modules/lua_script_debugger/view.html",
@@ -722,28 +735,7 @@
 		"/usr/local/share/LabJack/K3/gdm/modules/lua_script_debugger/lua_script_debugger.json",
 		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/helper_scripts/error_handler.js",
 		"/Users/chrisjohnson/git/labjack/werner_sachs_c_c++/a.c",
-		"/Users/chrisjohnson/git/labjack/werner_sachs_c_c++/b.c",
-		"/Users/chrisjohnson/git/labjack/werner_sachs_c_c++/ljm.h",
-		"/Users/chrisjohnson/git/labjack/werner_sachs_c_c++/b.h",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_info/module.json",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/dashboard/controller.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/analog_outputs_fw/controller.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/register_matrix/controller.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/presenter.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/static/js/device_selector.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/register_matrix/watchlist.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/register_matrix/matrix.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/third_party_code/customSpinners.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/dashboard/moduleConstants.json",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/register_matrix/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/reset/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/set_defaults/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_updater/controller.js",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/set_defaults/module.json",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_updater/device_selector.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_updater/view.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/switchboard_modules/device_updater/firmware_listing.html",
-		"/Users/chrisjohnson/git/Kiplingv3/ModuleDevelopment/ljswitchboard/src/node_modules/jshint/node_modules/underscore/index.html"
+		"/Users/chrisjohnson/git/labjack/werner_sachs_c_c++/b.c"
 	],
 	"find":
 	{
@@ -768,6 +760,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"watchdog",
+			"reg",
+			"updateCachedRegisterData",
+			"displayname",
+			"expandedConstants",
+			"retDict",
+			"flattenTags",
+			"fwminSelector",
+			"createFwminSelector",
+			"invalidateCacheFile",
+			"cachedReadFile",
+			";\n",
+			"initializeDataManager",
+			"checkDataManagerStatus",
+			"validateManagedModuleData",
+			"initializeDataManager",
+			"checkManagedModuleDataStatus",
+			"validateManagedModuleData",
+			"loadModuleStartupData",
+			"printTestStartupInfo",
+			"loadModuleStartupData",
+			"innerLoadModuleData",
+			"'startupData'",
+			"writeAndValidateModuleDataFile",
+			"saveModuleStartupData",
+			"revertModuleStartupData",
 			"getRegisterInfo",
 			"{};\n",
 			"refreshEditorHeights",
@@ -869,33 +887,7 @@
 			"isCalibrationValid",
 			"showDevice",
 			"createFlashOperation",
-			"createSafeReject",
-			"arg4",
-			"safelyReject",
-			"createSafeReject",
-			"getdata",
-			"createFlashOperation",
-			"readFlash(",
-			"readFlash",
-			"device_const",
-			"bundle",
-			"updateProgressScaled",
-			"createSafeReject",
-			"bundle",
-			"createFlashOperation",
-			"exports.createFlashOperation",
-			"this.createFlashOperation",
-			"createFlashOperation",
-			"readFlash(",
-			"readFlash",
-			"this.read",
-			"this.readSync",
-			"readSync",
-			"getManualVal",
-			"this.getManualVal",
-			"getManualVal",
-			"updateEthernetSettings",
-			"updateIPSettings"
+			"createSafeReject"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -919,23 +911,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "ljswitchboard-module_manager/lib/switchboard_modules/analog_outputs_fw/controller.js",
+					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/controller.js",
 					"settings":
 					{
-						"buffer_size": 12062,
+						"buffer_size": 23586,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								871,
-								871
+								10391,
+								10391
 							]
 						],
 						"settings":
@@ -1035,25 +1027,143 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6213.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/controller.js",
+					"file": "/C/ProgramData/LabJack/LJM/ljm_constants.json",
 					"settings":
 					{
-						"buffer_size": 5720,
+						"buffer_size": 130988,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2972,
-								2972
+								11391,
+								11391
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"devel": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "load-save",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 3242.0,
+						"translation.y": 462.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "ljswitchboard-modbus_map/lib/json_constants_parser.js",
+					"settings":
+					{
+						"buffer_size": 10206,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7058,
+								7075
 							]
 						],
 						"settings":
@@ -1149,29 +1259,28 @@
 							},
 							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 798.0,
+						"translation.y": 4275.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/module.json",
+					"buffer": 3,
+					"file": "ljswitchboard-modbus_map/package.json",
 					"settings":
 					{
-						"buffer_size": 236,
+						"buffer_size": 1024,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								69,
-								69
+								162,
+								162
 							]
 						],
 						"settings":
@@ -1277,135 +1386,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix/module.json",
-					"settings":
-					{
-						"buffer_size": 261,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								261,
-								261
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"devel": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
 					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/view.html",
 					"settings":
 					{
-						"buffer_size": 618,
+						"buffer_size": 965,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								285,
-								285
+								606,
+								606
 							]
 						],
 						"settings":
@@ -1500,9 +1493,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1512,18 +1503,18 @@
 				},
 				{
 					"buffer": 5,
-					"file": "ljswitchboard-kipling/lib/index.html",
+					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/group_row.html",
 					"settings":
 					{
-						"buffer_size": 4015,
+						"buffer_size": 64,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1966,
-								1966
+								54,
+								54
 							]
 						],
 						"settings":
@@ -1618,160 +1609,28 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 342.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix/controller.js",
+					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/module.json",
 					"settings":
 					{
-						"buffer_size": 40065,
+						"buffer_size": 258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5787,
-								5787
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"devel": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": "load-save",
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2943.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "ljswitchboard-module_manager/lib/switchboard_modules/register_matrix_fw/data_init.json",
-					"settings":
-					{
-						"buffer_size": 155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								26,
-								40
-							],
-							[
-								64,
-								79
-							],
-							[
-								88,
-								113
-							],
-							[
-								122,
-								148
+								258,
+								258
 							]
 						],
 						"settings":
@@ -1910,7 +1769,7 @@
 		"cols":
 		[
 			0.0,
-			0.906676479846,
+			0.967105263158,
 			1.0
 		],
 		"rows":
