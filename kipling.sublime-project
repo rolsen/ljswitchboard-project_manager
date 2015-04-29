@@ -118,6 +118,10 @@
 			"path": "ljswitchboard-window_manager"
 		},
 		{
+			"name": "ljmmm-parse",
+			"path": "ljmmm-parse"
+		},
+		{
 			"name": "LabJack LJM (win)",
 			"path": "/C/ProgramData/LabJack/LJM"
 		},

@@ -9,7 +9,8 @@
     "update": "node update.js",
     "start": "echo \"Error: no start specified\" && exit 1",
     "checkout_master": "node checkout_master.js",
-    "git_pull": "node git_pull.js"
+    "git_pull": "node git_pull.js",
+    "git_push": "node git_push.js"
   },
   "repository": {
     "type": "git",

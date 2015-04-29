@@ -55,3 +55,6 @@
 [submodule "ljswitchboard-splash_screen"]
 	path = ljswitchboard-splash_screen
 	url = https://github.com/chrisJohn404/ljswitchboard-splash_screen
+[submodule "ljmmm-parse"]
+	path = ljmmm-parse
+	url = https://github.com/samnsparky/ljmmm-parse
