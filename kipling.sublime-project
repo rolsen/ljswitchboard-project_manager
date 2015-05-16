@@ -114,6 +114,14 @@
 			"path": "ljswitchboard-static_files"
 		},
 		{
+			"name": "Version Manager",
+			"path": "ljswitchboard-version_manager"
+		},
+		{
+			"name": "Firmware Verifier",
+			"path": "ljswitchboard-firmware_verifier"
+		},
+		{
 			"name": "Window Manager",
 			"path": "ljswitchboard-window_manager"
 		},
