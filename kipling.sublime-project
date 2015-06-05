@@ -131,11 +131,15 @@
 		},
 		{
 			"name": "LabJack LJM (win)",
-			"path": "/C/ProgramData/LabJack/LJM"
+			"path": "/C/ProgramData/LabJack/"
+		},
+		{
+			"name": "LabJack Install (win)",
+			"path": "/C/Program Files (x86)/LabJack"
 		},
 		{
 			"name": "LabJack LJM (unix)",
-			"path": "/usr/local/share/LabJack/LJM"
+			"path": "/usr/local/share/LabJack"
 		},
 		{
 			"name": "root",
