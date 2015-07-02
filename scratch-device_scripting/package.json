@@ -1,0 +1,11 @@
+{
+  "name": "scratch-device_scripting",
+  "version": "1.0.0",
+  "description": "aa",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
