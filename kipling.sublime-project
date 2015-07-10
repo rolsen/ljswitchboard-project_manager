@@ -86,16 +86,16 @@
 			"path": "ljswitchboard-ljm_driver_constants"
 		},
 		{
-			"name": "Process Manager",
-			"path": "LabJack-process_manager"
-		},
-		{
 			"name": "Modbus Map",
 			"path": "ljswitchboard-modbus_map"
 		},
 		{
+			"name": "Process Manager",
+			"path": "LabJack-process_manager"
+		},
+		{
 			"name": "Modules",
-			"path": "ljswitchboard-module_manager/lib/switchboard_modules"
+			"path": "ljswitchboard-module_manager\\lib\\switchboard_modules"
 		},
 		{
 			"name": "Module Manager",
@@ -131,19 +131,19 @@
 		},
 		{
 			"name": "LabJack LJM (win)",
-			"path": "/C/ProgramData/LabJack/"
+			"path": "C:\\ProgramData\\LabJack"
 		},
 		{
 			"name": "LabJack Install (win)",
-			"path": "/C/Program Files (x86)/LabJack"
+			"path": "C:\\Program Files (x86)\\LabJack"
 		},
 		{
 			"name": "LabJack LJM (unix)",
-			"path": "/usr/local/share/LabJack"
+			"path": "u:sr\\local\\share\\LabJack"
 		},
 		{
 			"name": "root",
-			"path": "./"
+			"path": "."
 		}
 	],
 	"settings":
