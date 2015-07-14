@@ -126,6 +126,10 @@
 			"path": "ljswitchboard-window_manager"
 		},
 		{
+			"name": "Blog Posts",
+			"path": "blog_posts"
+		},
+		{
 			"name": "ljmmm-parse",
 			"path": "ljmmm-parse"
 		},
