@@ -66,6 +66,14 @@
 			"path": "ljswitchboard-io_manager"
 		},
 		{
+			"name": "Simple Logger",
+			"path": "ljswitchboard-simple_logger"
+		},
+		{
+			"name": "Shell Logger",
+			"path": "ljm-shell_logger"
+		},
+		{
 			"name": "Kipling",
 			"path": "ljswitchboard-kipling"
 		},

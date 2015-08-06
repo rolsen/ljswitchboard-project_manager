@@ -64,3 +64,9 @@
 [submodule "ljswitchboard-firmware_verifier"]
 	path = ljswitchboard-firmware_verifier
 	url = https://github.com/chrisJohn404/ljswitchboard-firmware_verifier
+[submodule "ljswitchboard-simple_logger"]
+	path = ljswitchboard-simple_logger
+	url = https://github.com/chrisJohn404/ljswitchboard-simple_logger
+[submodule "ljm-shell_logger"]
+	path = ljm-shell_logger
+	url = https://github.com/chrisJohn404/ljm-shell_logger

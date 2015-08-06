@@ -1,0 +1,29 @@
+{
+  "name": "ljswitchboard-website_application_features",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "Chris Johnson",
+    "url": "http://labjack.com"
+  },
+  "main": "./lib/version_manager.js",
+  "keywords": [
+    "LabJack",
+    "LJM",
+    "T7",
+    "ljswitchboard"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/chrisJohn404/ljswitchboard-version_manager/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisJohn404/ljswitchboard-version_manager/issues"
+  },
+  "dependencies": {
+    "resize": "0.7.2"
+  },
+  "scripts": {
+    "test": "node ./node_modules/nodeunit/bin/nodeunit ./test/test.js"
+  }
+}
