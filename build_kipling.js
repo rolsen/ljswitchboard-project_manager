@@ -1,7 +1,7 @@
 
 /*
- * start_kipling.js is a file that helps with starting kipling.  It runs kipling
- * from the ljswitchboard-splash_screen module.
+ * build_kipling.js is a file that helps with building kipling.  It builds
+ * Kipling from the ljswitchboard-builder module.
  *
  * Dependencies:
  *     1. io.js version 1.2.0
@@ -29,12 +29,12 @@ try {
 	var startingDir = process.cwd();
 
 	// Navigate into the folder
-	process.chdir('ljswitchboard-splash_screen');
+	process.chdir('ljswitchboard-builder');
 
 	// Perform npm install command
 	// console.log('Processing: ', folder);
 	try {
-		var installOutput = child_process.execSync('npm start');
+		var installOutput = child_process.execSync('npm run build_project');
 	} catch(err) {
 		console.log('Error Starting Kipling');
 	}
