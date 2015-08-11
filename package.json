@@ -11,7 +11,8 @@
     "checkout_master": "node checkout_master.js",
     "git_pull": "node git_pull.js",
     "git_push": "node git_push.js",
-    "git_status": "node git_status.js"
+    "git_status": "node git_status.js",
+    "start": "node start_kipling.js"
   },
   "repository": {
     "type": "git",
