@@ -68,3 +68,10 @@ When you haven't done much development on a computer and need to catch up that d
 
 When running the command `npm run update` a lot of packages fail to be upgraded due to EACCESS errors
 1. Try navigating to `home/[username]/.npm` and running `sudo chown -R [username] ./` to make sure that npm has access to edit the files.
+
+## Other documents
+Some extra installation & setup instructions:
+https://docs.google.com/document/d/1cv6Vt2i1TBBX3FfVmVyhCD3V0fwWm9nwvP3a_XmkBm0/edit?usp=sharing
+
+A document with some of the priorities & todos:
+https://docs.google.com/document/d/1l7COOy2fvlj_OOyijTg_mQJZJnLCLZDThMRwGygTTTQ/edit?usp=sharing
