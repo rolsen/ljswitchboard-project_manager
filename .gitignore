@@ -4,3 +4,4 @@ kipling.sublime-workspace
 scratch-device_scripting/node_modules
 
 website_application_features/kipling_screen_shots
+*.log
