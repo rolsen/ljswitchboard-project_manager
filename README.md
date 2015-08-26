@@ -14,13 +14,19 @@ echo 'It is time to get coffee.'
 git submodule update
 echo 'It is time to get a donut.'
 npm run setup
+echo 'checkout the master branch for all repositories'
+npm run checkout_master
+echo 'update all the repositories'
+npm run git_pull
 ```
 
-
-### Use Node 0.10.22
-
+## Required Node Versions
+Windows users should be using node 0.12.7 as of 8/26/2015
+Mac & Linux users should be using io.js 1.2.0 as of 8/26/2015
+these versions are likely to change.  
 running "nave.sh"
 
+### Useful tool for installing node on Mac & Linux
 ```bash
 wget https://raw.github.com/isaacs/nave/master/nave.sh
 sudo bash nave.sh usemain 0.10.22
@@ -50,10 +56,10 @@ When you haven't done much development on a computer and need to catch up that d
 
 1. perform `git fetch`/`git pull` on the package manager repo
 2. perform `git status` to see what has been changed/what is old.
-3. perform `npm run checkout_master`
-4. perform `npm run git_pull`
+3. perform `npm run checkout_master` to get all sub-repos to checkout the master branch.
+4. perform `npm run git_pull` to instruct all sub-repos to update themselves.
  - if things don't work then there are likely changes that need to be submitted.
-5. perform `npm run update`
+5. perform `npm run update` to perform an npm update in all directories.
 
 
 
