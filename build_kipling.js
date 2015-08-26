@@ -36,8 +36,8 @@ try {
 	try {
 		var installOutput = child_process.execSync('npm run build_project');
 	} catch(err) {
-		console.log('Error Starting Kipling');
-		console.log('(Did you run `npm run setup`? If not, run `rm ./ljswitchboard-builder/*` first.)');
+		// This really shouldn't error out... unless an old version of node is being used.
+		console.log('Error Building Kipling');
 	}
 
 	// Navigate back to the starting directory
