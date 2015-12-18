@@ -2,32 +2,6 @@
 
 Orchestrator for LabJack Kipling development.
 
-### Upgrading to nodejs version 5.x.x
-Making this move primarily to get a flatter node_modules directory to prevent the long path issues on windows.
-
-####mac:
-Current development takes place primarily on a 10.8.5 Mac OS X machine.  I needed to install xcode 5.1.1:
-https://teamtreehouse.com/community/installing-xcode-on-1085-mac
-
-I also had to manually remove npm from my path by editing the .bash_profile file:
-```
-# The new path for npm and node:
-export PATH="/usr/local/bin/node":$PATH
-export PATH="/usr/local/bin/npm":$PATH
-# the old path for npm:
-# export PATH="/usr/local/share/npm/bin":$PATH
-```
-
-I had to uninstall node-gyp:
-```
-npm uninstall -g node-gyp
-```
-
-#### windows (windows 10)
-I needed to install visual studio 2015.  There is now a cli tool in preview that can be downloaded and installed instead.
-Had a lot of issues with removing the old npm (npm was upgraded to version 3.x.x)
-
-
 
 ## Getting Started
 
@@ -99,3 +73,31 @@ https://docs.google.com/document/d/1cv6Vt2i1TBBX3FfVmVyhCD3V0fwWm9nwvP3a_XmkBm0/
 
 A document with some of the priorities & todos:
 https://docs.google.com/document/d/1l7COOy2fvlj_OOyijTg_mQJZJnLCLZDThMRwGygTTTQ/edit?usp=sharing
+
+
+### Upgrading to nodejs version 5.x.x
+Making this move primarily to get a flatter node_modules directory to prevent the long path issues on windows.
+
+####mac:
+Current development takes place primarily on a 10.8.5 Mac OS X machine.  I needed to install xcode 5.1.1:
+https://teamtreehouse.com/community/installing-xcode-on-1085-mac
+
+I also had to manually remove npm from my path by editing the .bash_profile file:
+```
+# The new path for npm and node:
+export PATH="/usr/local/bin/node":$PATH
+export PATH="/usr/local/bin/npm":$PATH
+# the old path for npm:
+# export PATH="/usr/local/share/npm/bin":$PATH
+```
+
+I had to uninstall node-gyp:
+```
+npm uninstall -g node-gyp
+```
+
+#### windows (windows 10)
+I needed to install visual studio 2015.  There is now a cli tool in preview that can be downloaded and installed instead.
+Had a lot of issues with removing the old npm (npm was upgraded to version 3.x.x)
+
+
