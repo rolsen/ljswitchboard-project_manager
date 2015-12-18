@@ -2,10 +2,10 @@
 
 Orchestrator for LabJack Kipling development.
 
-## Upgrading to nodejs version 5.x.x
+### Upgrading to nodejs version 5.x.x
 Making this move primarily to get a flatter node_modules directory to prevent the long path issues on windows.
 
-###mac:
+####mac:
 Current development takes place primarily on a 10.8.5 Mac OS X machine.  I needed to install xcode 5.1.1:
 https://teamtreehouse.com/community/installing-xcode-on-1085-mac
 
@@ -23,7 +23,7 @@ I had to uninstall node-gyp:
 npm uninstall -g node-gyp
 ```
 
-### windows (windows 10)
+#### windows (windows 10)
 I needed to install visual studio 2015.  There is now a cli tool in preview that can be downloaded and installed instead.
 Had a lot of issues with removing the old npm (npm was upgraded to version 3.x.x)
 
