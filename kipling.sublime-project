@@ -38,8 +38,20 @@
 	"folders":
 	[
 		{
+			"name": "Kipling CLI",
+			"path": "kipling-cli"
+		},
+		{
 			"name": "Splash Screen",
 			"path": "ljswitchboard-splash_screen"
+		},
+		{
+			"name": "Electron Splash Screen",
+			"path": "ljswitchboard-electron_splash_screen"
+		},
+		{
+			"name": "ljm-ffi",
+			"path": "ljm-ffi"
 		},
 		{
 			"name": "LabJack-nodejs",

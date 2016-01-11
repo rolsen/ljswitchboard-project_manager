@@ -70,3 +70,18 @@
 [submodule "ljm-shell_logger"]
 	path = ljm-shell_logger
 	url = https://github.com/chrisJohn404/ljm-shell_logger
+[submodule "ljswitchboard-electron_splash_screen"]
+	path = ljswitchboard-electron_splash_screen
+	url = ./ljswitchboard-electron_splash_screen
+[submodule "ljm-ffi"]
+	path = ljm-ffi
+	url = ./ljm-ffi
+[submodule "ljswitchboard-server"]
+	path = ljswitchboard-server
+	url = ./ljswitchboard-server
+[submodule "kipling-cli"]
+	path = kipling-cli
+	url = ./kipling-cli
+[submodule "node-ljm"]
+	path = node-ljm
+	url = ./node-ljm
