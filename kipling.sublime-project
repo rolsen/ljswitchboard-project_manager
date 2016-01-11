@@ -115,7 +115,7 @@
 		},
 		{
 			"name": "Modules",
-			"path": "ljswitchboard-module_manager\\lib\\switchboard_modules"
+			"path": "ljswitchboard-module_manager/lib/switchboard_modules"
 		},
 		{
 			"name": "Module Manager",
