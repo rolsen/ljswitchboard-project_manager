@@ -100,4 +100,30 @@ npm uninstall -g node-gyp
 I needed to install visual studio 2015.  There is now a cli tool in preview that can be downloaded and installed instead.
 Had a lot of issues with removing the old npm (npm was upgraded to version 3.x.x)
 
+(as of 1/x/2016 the winows 10 computer has nodejs 5.x.x which contains npm version 3.x.x)
+
+#### Linux 32/64 (Both versions of ubuntu).
+Current Linux development uses two ubuntu version 14.0.x virtual machines.  The 32bit version is an i686 computer so I had to modify the nave.sh script to get the correct node.js .tar.gz link from node's website.
+
+For both computers I had to uninstall node-gyp:
+```
+sudo npm uninstall -g node-gyp
+```
+
+For the project as a whole, I wrote a npm script:
+```
+npm run rm_r_node_modules
+```
+This script goes through each module and deletes the node_modules directory.
+
+The general process of:
+1. git pull (on the project manager repo)
+2. npm run git_pull (performs a git pull in each found directory)
+3. npm run rm_r_node_modules (the new step)
+4. npm run update (performs an npm update in each found directory)
+
+worked to get everything working again on the linux32/linux64 machines to get K3 building again.
+
+
+
 
