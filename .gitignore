@@ -4,6 +4,9 @@ kipling.sublime-workspace
 scratch-device_scripting/node_modules
 
 website_application_features/kipling_screen_shots
+website_application_features/node_modules
 
 /node-ljm
 *.log
+
+.DS_Store

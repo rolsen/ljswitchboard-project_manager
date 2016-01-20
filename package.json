@@ -11,6 +11,7 @@
     "git_pull": "node git_pull.js",
     "git_push": "node git_push.js",
     "git_status": "node git_status.js",
+    "rm_r_node_modules": "node rm_r_node_modules.js",
     "start": "node start_kipling.js",
     "build": "node build_kipling.js"
   },
