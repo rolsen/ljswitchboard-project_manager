@@ -54,6 +54,7 @@ case "$uname" in
 esac
 case "$uname" in
   *i386*) arch=x86 ;;
+  *i686*) arch=x86 ;;
   *x86_64*) arch=x64 ;;
   *raspberrypi*) arch=arm-pi ;;
 esac
