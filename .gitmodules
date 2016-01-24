@@ -85,3 +85,6 @@
 [submodule "ljm-ffi"]
 	path = ljm-ffi
 	url = https://github.com/chrisJohn404/ljm-ffi
+[submodule "ljswitchboard-networking_tools"]
+	path = ljswitchboard-networking_tools
+	url = https://github.com/chrisJohn404/ljswitchboard-networking_tools
