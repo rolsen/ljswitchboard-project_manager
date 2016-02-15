@@ -88,3 +88,6 @@
 [submodule "ljswitchboard-networking_tools"]
 	path = ljswitchboard-networking_tools
 	url = https://github.com/chrisJohn404/ljswitchboard-networking_tools
+[submodule "ljswitchboard-ljm_special_addresses"]
+	path = ljswitchboard-ljm_special_addresses
+	url = https://github.com/chrisJohn404/ljswitchboard-ljm_special_addresses
