@@ -91,3 +91,6 @@
 [submodule "ljswitchboard-ljm_special_addresses"]
 	path = ljswitchboard-ljm_special_addresses
 	url = https://github.com/chrisJohn404/ljswitchboard-ljm_special_addresses
+[submodule "ljswitchboard-ljm_device_manager"]
+	path = ljswitchboard-ljm_device_manager
+	url = https://github.com/chrisJohn404/ljswitchboard-ljm_device_manager
