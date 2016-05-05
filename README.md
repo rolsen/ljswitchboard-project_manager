@@ -133,6 +133,8 @@ The general process of:
 
 worked to get everything working again on the linux32/linux64 machines to get K3 building again.
 
+Installing node.js from the raw download:
+https://blog.wia.io/installing-node-js-on-a-raspberry-pi-3
 
 
 
