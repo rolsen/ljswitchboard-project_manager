@@ -3,6 +3,15 @@
 Orchestrator for LabJack Kipling development.
 
 
+## Building
+1. Run "git pull" to update the project manager.
+1. Make sure the proper version of node.js is installed.  Ihe x-io_manager has a node.js binary it is programmed to use.  Make sure the build computer has the same version as the io_manager.
+2. run "npm run git_pull" to update each of the modules.  If necessary, run "npm run checkout_master".
+3. run "npm run rm_r_node_modules" to delete all sub-module's node_modules folders.
+4. run "npm run setup" to install all of the sub-modules.
+ - You should probably go get beer at this point.  This takes a while...
+5. Navigate into the ljswitchboard-build directory and run "npm run build_project" to build the project.  The output files will exist in the /output folder.
+
 ## Getting Started
 
 ```bash
