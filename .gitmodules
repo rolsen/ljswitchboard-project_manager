@@ -94,3 +94,6 @@
 [submodule "ljswitchboard-ljm_device_manager"]
 	path = ljswitchboard-ljm_device_manager
 	url = https://github.com/chrisJohn404/ljswitchboard-ljm_device_manager
+[submodule "lj-apps-win-registry-info"]
+	path = lj-apps-win-registry-info
+	url = https://github.com/chrisJohn404/lj-apps-win-registry-info
