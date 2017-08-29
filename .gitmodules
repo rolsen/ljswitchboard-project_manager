@@ -57,7 +57,7 @@
 	url = https://github.com/chrisJohn404/ljswitchboard-splash_screen
 [submodule "ljmmm-parse"]
 	path = ljmmm-parse
-	url = https://github.com/samnsparky/ljmmm-parse
+	url = https://github.com/chrisJohn404/ljmmm-parse
 [submodule "ljswitchboard-version_manager"]
 	path = ljswitchboard-version_manager
 	url = https://github.com/chrisJohn404/ljswitchboard-version_manager
