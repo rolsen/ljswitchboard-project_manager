@@ -43,6 +43,18 @@ wget https://raw.github.com/isaacs/nave/master/nave.sh
 sudo bash nave.sh usemain 0.10.22
 ```
 
+## Building & Releasing (12/1/2017)
+1. git pull // update -project_manager
+2. npm run git_pull_core // Pull core project updates.
+3. npm run clean_core // Clean the core projects.
+4. npm run setup_core_dist // install distribution dependencies for the core projects.
+5. npm run // to make sure Kipling can properly start.
+6. navigate into builder repo, "npm run build_project"
+7. Re-name output folder to be Kipling[major].[minor].[patch].[year]_[month]_[date]_[platform]
+   ex: Kipling.3.1.8.2017_08_30_win32
+8. Compress created folder.
+
+
 ## Kipling Core projects/folders:
 ljswitchboard-splash_screen"
 ljswitchboard-core"
@@ -54,14 +66,22 @@ ljswitchboard-static_files
 
 ## Available commands:
 
-npm run setup_all: loops through all folders and executes "npm install"
-npm run setup: loops through core projects and executes "npm install"
-npm run setup_core_dev: loops through core projects and executes "npm install"
-npm run setup_core_dist: loops through core projects and executes "npm install --production"
-npm run git_pull_core: loops through core projects and executes "git pull"
+"npm run setup_all": loops through all folders and executes "npm install"
+"npm run setup": loops through core projects and executes "npm install"
+"npm run setup_core_dev": loops through core projects and executes "npm install"
+"npm run setup_core_dist": loops through core projects and executes "npm install --production"
+- Note: setting up ljswitchboard-io_manager takex 100+ seconds on windows.
+"npm run git_pull_core": loops through core projects and executes "git pull"
+"npm run clean_core": loops through core folders and executes "rm -r node_modules"
+"npm run build_k3": runs the build script in the ljswitchboard-builder project.
+
+"npm run prep_for_dist": runs "git_pull_core", "clean_core", and "setup_core_dist".
+"npm run prep_and_build": runs "git_pull_core", "clean_core", "setup_core_dist", and "build_k3".
+
+"npm run run_built_k3": runs the created K3 .exe
 
 
-npm run clean_core: loops through core folders and executes "rm -r node_modules"
+
 
 
 

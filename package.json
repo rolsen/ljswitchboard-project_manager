@@ -10,7 +10,7 @@
     "setup_core_dist": "node setup_core_dist.js",
     "setup_core_dev": "node setup_core_dev.js",
     "update": "node update.js",
-    "clean_core": "node git_pull_core.js",
+    "clean_core": "node clean_core.js",
     "checkout_master": "node checkout_master.js",
     "git_pull": "node git_pull.js",
     "git_pull_core": "node git_pull_core.js",
@@ -18,7 +18,10 @@
     "git_status": "node git_status.js",
     "rm_r_node_modules": "node rm_r_node_modules.js",
     "start": "node start_kipling.js",
-    "build": "node build_kipling.js"
+    "prep_for_dev": "node prep_for_dev.js",
+    "prep_for_dist": "node prep_for_dist.js",
+    "prep_and_build": "node prep_and_build.js",
+    "run_built_k3": "node run_built_k3.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +32,9 @@
   "bugs": {
     "url": "https://github.com/rolsen/ljswitchboard-project_manager/issues"
   },
-  "homepage": "https://github.com/rolsen/ljswitchboard-project_manager"
+  "homepage": "https://github.com/rolsen/ljswitchboard-project_manager",
+  "dependencies": {
+    "async": "^2.6.0",
+    "q": "^1.5.1"
+  }
 }

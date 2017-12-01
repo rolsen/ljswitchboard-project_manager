@@ -89,7 +89,7 @@ function printStatus() {
 	for(var i = 0; i < (minSize - headerLen); i++) {
 		headerMessage += ' ';
 	}
-	headerMessage += '\t| chk';
+	headerMessage += '\t| rm-r';
 	headerMessage += '\t| succ';
 	headerMessage += '\t| fin';
 	console.log(headerMessage);
