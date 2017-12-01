@@ -40,6 +40,14 @@ var osExecFunc = {
 			{
 				cwd:process.cwd(),
 			});
+	},
+	'linux': function(cmd) {
+		return child_process.execFile(
+			cmd,
+			[],
+			{
+				cwd:process.cwd(),
+			});
 	}
 }[buildOS];
 
