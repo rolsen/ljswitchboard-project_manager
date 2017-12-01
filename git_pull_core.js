@@ -17,7 +17,7 @@ var path = require('path');
 var child_process = require('child_process');
 
 // Globals
-// var NODE_VERSION = 'v1.2.0';
+var NODE_VERSION = 'v1.2.0';
 var NWJS_VERSION = '0.12.1';
 
 
@@ -31,13 +31,8 @@ try {
 
 // Get a listing of the folders & files in the current directory.
 // var currentFiles = fs.readdirSync('.');
-// var currentFiles
-
 var ljswitchboardBuilderPackageInfo = require('./ljswitchboard-builder/package.json');
 var currentFiles = ljswitchboardBuilderPackageInfo.kipling_dependencies;
-
-
-
 var ignoredFolders = ['.git'];
 var currentFolders = currentFiles.filter(function(fileName) {
 	// Determine if the found fileName is a directory
@@ -55,8 +50,7 @@ var installationStates = [];
 currentFolders.forEach(function(folder) {
 	installationStates.push({
 		'folder': folder,
-		'isInstalled': false,
-		'isDeduped': false,
+		'isCheckedOut': false,
 		'isFinished': false,
 		'isSuccessful': false
 	});
@@ -79,8 +73,7 @@ function printStatus() {
 		for(var i = 0; i < numExtraSpaces; i++) {
 			message += ' ';
 		}
-		message += '\t| ' + install.isInstalled.toString();
-		message += '\t| ' + install.isDeduped.toString();
+		message += '\t| ' + install.isCheckedOut.toString();
 		message += '\t| ' + install.isSuccessful.toString();
 		message += '\t| ' + install.isFinished.toString();
 		// message += '|' + nameSize.toString();
@@ -96,8 +89,7 @@ function printStatus() {
 	for(var i = 0; i < (minSize - headerLen); i++) {
 		headerMessage += ' ';
 	}
-	headerMessage += '\t| inst.';
-	headerMessage += '\t| dedup';
+	headerMessage += '\t| chk';
 	headerMessage += '\t| succ';
 	headerMessage += '\t| fin';
 	console.log(headerMessage);
@@ -111,11 +103,8 @@ function updateStatus(name, options) {
 			if(typeof(options.isFinished) !== 'undefined') {
 				install.isFinished = options.isFinished;
 			}
-			if(typeof(options.isInstalled) !== 'undefined') {
-				install.isInstalled = options.isInstalled;
-			}
-			if(typeof(options.isDeduped) !== 'undefined') {
-				install.isDeduped = options.isDeduped;
+			if(typeof(options.isCheckedOut) !== 'undefined') {
+				install.isCheckedOut = options.isCheckedOut;
 			}
 			if(typeof(options.isSuccessful) !== 'undefined') {
 				install.isSuccessful = options.isSuccessful;
@@ -135,13 +124,9 @@ currentFolders.forEach(function(folder) {
 
 	// Perform npm install command
 	// console.log('Processing: ', folder);
-	// console.log('  - Installing');
 	try {
-		var installOutput = child_process.execSync('npm install --production');
-		updateStatus(folder, {isInstalled: true});
-		// console.log('  - Deduping');
-		var dedupeOutput = child_process.execSync('npm dedupe');
-		updateStatus(folder, {isDeduped: true, isSuccessful: true, isFinished: true});
+		var installOutput = child_process.execSync('git pull');
+		updateStatus(folder, {isCheckedOut: true, isSuccessful: true, isFinished: true});
 	} catch(err) {
 		console.log('Error!!!');
 		updateStatus(folder, {isSuccessful: false, isFinished: true});
@@ -150,21 +135,6 @@ currentFolders.forEach(function(folder) {
 	// Navigate back to the starting directory
 	process.chdir(startingDir);
 });
-
-// Install node-webkit
-// console.log('Installing nw version:', NWJS_VERSION);
-// var startingDir = process.cwd();
-// var builderDir = path.join(startingDir, 'ljswitchboard-builder');
-// process.chdir(builderDir);
-// try {
-// 	var nwInstallOut = child_process.execSync('npm install nw@' + NWJS_VERSION);
-// 	console.log('Successfully installed nw');
-// } catch(err) {
-// 	console.log('Error Installing nw');
-// }
-// process.chdir(startingDir);
-
-
 
 } catch(err) {
 	console.error('Error', err);

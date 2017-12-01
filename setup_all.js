@@ -30,14 +30,7 @@ if(typeof(child_process.execSync) !== 'function') {
 try {
 
 // Get a listing of the folders & files in the current directory.
-// var currentFiles = fs.readdirSync('.');
-// var currentFiles
-
-var ljswitchboardBuilderPackageInfo = require('./ljswitchboard-builder/package.json');
-var currentFiles = ljswitchboardBuilderPackageInfo.kipling_dependencies;
-
-
-
+var currentFiles = fs.readdirSync('.');
 var ignoredFolders = ['.git'];
 var currentFolders = currentFiles.filter(function(fileName) {
 	// Determine if the found fileName is a directory
@@ -137,7 +130,7 @@ currentFolders.forEach(function(folder) {
 	// console.log('Processing: ', folder);
 	// console.log('  - Installing');
 	try {
-		var installOutput = child_process.execSync('npm install --production');
+		var installOutput = child_process.execSync('npm install');
 		updateStatus(folder, {isInstalled: true});
 		// console.log('  - Deduping');
 		var dedupeOutput = child_process.execSync('npm dedupe');
@@ -152,17 +145,17 @@ currentFolders.forEach(function(folder) {
 });
 
 // Install node-webkit
-// console.log('Installing nw version:', NWJS_VERSION);
-// var startingDir = process.cwd();
-// var builderDir = path.join(startingDir, 'ljswitchboard-builder');
-// process.chdir(builderDir);
-// try {
-// 	var nwInstallOut = child_process.execSync('npm install nw@' + NWJS_VERSION);
-// 	console.log('Successfully installed nw');
-// } catch(err) {
-// 	console.log('Error Installing nw');
-// }
-// process.chdir(startingDir);
+console.log('Installing nw version:', NWJS_VERSION);
+var startingDir = process.cwd();
+var builderDir = path.join(startingDir, 'ljswitchboard-builder');
+process.chdir(builderDir);
+try {
+	var nwInstallOut = child_process.execSync('npm install nw@' + NWJS_VERSION);
+	console.log('Successfully installed nw');
+} catch(err) {
+	console.log('Error Installing nw');
+}
+process.chdir(startingDir);
 
 
 
