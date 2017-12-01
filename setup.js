@@ -137,7 +137,7 @@ currentFolders.forEach(function(folder) {
 	// console.log('Processing: ', folder);
 	// console.log('  - Installing');
 	try {
-		var installOutput = child_process.execSync('npm install --production');
+		var installOutput = child_process.execSync('npm install');
 		updateStatus(folder, {isInstalled: true});
 		// console.log('  - Deduping');
 		var dedupeOutput = child_process.execSync('npm dedupe');

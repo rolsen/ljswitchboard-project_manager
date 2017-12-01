@@ -2,7 +2,6 @@
 
 Orchestrator for LabJack Kipling development.
 
-
 ## Building
 Once the subrepositories of `ljswitchboard-project_manager` have been updated (changes to those subrepos have been committed and pushed/merged to `master`, `package.json` files have been updated with new version numbers, and subrepos have been `npm publish`ed), the main Kipling version may be updated:
  - `ljswitchboard-kipling/package.json`: update `"version"`
@@ -43,6 +42,26 @@ running "nave.sh"
 wget https://raw.github.com/isaacs/nave/master/nave.sh
 sudo bash nave.sh usemain 0.10.22
 ```
+
+## Kipling Core projects/folders:
+ljswitchboard-splash_screen"
+ljswitchboard-core"
+ljswitchboard-io_manager"
+ljswitchboard-kipling"
+ljswitchboard-module_manager"
+ljswitchboard-static_files
+
+
+## Available commands:
+
+npm run setup_all: loops through all folders and executes "npm install"
+npm run setup: loops through core projects and executes "npm install"
+npm run setup_core_dev: loops through core projects and executes "npm install"
+npm run setup_core_dist: loops through core projects and executes "npm install --production"
+npm run git_pull_core: loops through core projects and executes "git pull"
+
+
+npm run clean_core: loops through core folders and executes "rm -r node_modules"
 
 
 
