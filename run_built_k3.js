@@ -7,9 +7,41 @@ var path = require('path');
 var child_process = require('child_process');
 
 
+// Figure out what OS we are building for
+var buildOS = {
+	'darwin': 'darwin',
+	'win32': 'win32'
+}[process.platform];
+if(typeof(buildOS) === 'undefined') {
+	buildOS = 'linux';
+}
 
 var cwd = process.cwd();
-var k3Path = path.join(cwd, 'ljswitchboard-builder','output','Kipling.exe');
+
+
+var k3Path = {
+	'darwin': path.join(cwd, 'ljswitchboard-builder','output','Kipling.app'),
+	'win32': path.join(cwd, 'ljswitchboard-builder','output','Kipling.exe'),
+	'linux': path.join(cwd, 'ljswitchboard-builder','output','Kipling'),
+}[buildOS];
+
+var osExecFunc = {
+	'darwin': function(cmd) {
+		return child_process.exec(
+			'open ' + cmd,
+			{
+				cwd:process.cwd(),
+			});
+	},
+	'win32': function(cmd) {
+		return child_process.execFile(
+			cmd,
+			[],
+			{
+				cwd:process.cwd(),
+			});
+	}
+}[buildOS];
 
 function runFile(filePath) {
 	var defered = q.defer();
@@ -52,19 +84,27 @@ function runFile(filePath) {
 		console.log(data.toString());
 	}
 
-	var subProcess = child_process.execFile(
-		filePath,
-		[],
-		{
-			cwd:process.cwd(),
-		});
-	subProcess.on('error', errorListener);
-	subProcess.on('exit', exitListener);
-	subProcess.on('close', closeListener);
-	subProcess.on('disconnect', disconnectListener);
-	subProcess.on('message', messageListener);
-	subProcess.stdout.on('data', stdinListener);
-	subProcess.stderr.on('data', stderrListener);
+	// var subProcess = child_process.execFile(
+	// 	filePath,
+	// 	[],
+	// 	{
+	// 		cwd:process.cwd(),
+	// 	});
+	var subprocess;
+	if(typeof(osExecFunc) === 'function') {
+		subProcess = osExecFunc(filePath);
+
+		subProcess.on('error', errorListener);
+		subProcess.on('exit', exitListener);
+		subProcess.on('close', closeListener);
+		subProcess.on('disconnect', disconnectListener);
+		subProcess.on('message', messageListener);
+		subProcess.stdout.on('data', stdinListener);
+		subProcess.stderr.on('data', stderrListener);
+	} else {
+		console.log('osExecFunc should be type function.', typeof(osExecFunc));
+		finishFunc();
+	}
 
 	return defered.promise;
 }
