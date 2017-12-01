@@ -45,14 +45,14 @@ sudo bash nave.sh usemain 0.10.22
 
 ## Building & Releasing (12/1/2017)
 1. git pull // update -project_manager
-2. npm run git_pull_core // Pull core project updates.
-3. npm run clean_core // Clean the core projects.
-4. npm run setup_core_dist // install distribution dependencies for the core projects.
-5. npm run // to make sure Kipling can properly start.
-6. navigate into builder repo, "npm run build_project"
-7. Re-name output folder to be Kipling[major].[minor].[patch].[year]_[month]_[date]_[platform]
-   ex: Kipling.3.1.8.2017_08_30_win32
-8. Compress created folder.
+2. npm run build // runs git_pull_core, prep_build_and_run
+3. When finished will launch the built version of Kipling.  A compressed version of Kipling is also created and is ready to be uploaded to github for release.
+
+### Debugging building.
+If things aren't working properly, run:
+1. npm run git_pull // to pull all latest project changes.
+2. npm run setup_all // to run npm install everywhere.
+
 
 
 ## Kipling Core projects/folders:
