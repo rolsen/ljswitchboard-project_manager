@@ -17,12 +17,68 @@ if(typeof(buildOS) === 'undefined') {
 }
 
 var cwd = process.cwd();
+var BUILDER_PATH = path.join(cwd, 'ljswitchboard-builder');
+// var currentFiles = fs.readdirSync(BUILDER_PATH);
 
+
+// var currentFolders = currentFiles.filter(function(fileName) {
+// 	// Determine if the found fileName is a directory
+// 	var isDir = fs.statSync(path.join('.',fileName)).isDirectory();
+
+// 	// Determine if the found fileName should be ignored
+// 	var isIgnored = ignoredFolders.indexOf(fileName) >= 0;
+
+// 	// If the fileName is a directory and shouldn't be ignored then return true.
+// 	// (indicating that the fileName passes the filter)
+// 	return isDir && !isIgnored;
+// });
+// console.log('hh', currentFiles);
+
+// var startingDir = process.cwd();
+var TEMP_PROJECT_FILES_DIRECTORY = 'temp_project_files';
+var TEMP_PROJECT_FILES_PATH = path.join(BUILDER_PATH, TEMP_PROJECT_FILES_DIRECTORY);
+var kiplingPackagePath = path.join(TEMP_PROJECT_FILES_PATH,'ljswitchboard-kipling','package.json');
+var kiplingPackageInfo = require(kiplingPackagePath);
+var k3Version = kiplingPackageInfo.version;
+
+console.log('Running info for k3', k3Version);
+
+// Building file output string kipling.3.1.10.2017_10_17_mac64
+var k3StrPartial = ['kipling', k3Version].join('.') + '.'; // kipling.3.1.10.
+
+var date = new Date();
+var year = date.getFullYear();
+var yearStr = year.toString();
+var month = date.getMonth() + 1;
+var monthStr = month.toString();
+if(monthStr.length < 2) {
+	monthStr = '0' + monthStr;
+}
+var day = date.getDate();
+var dayStr = day.toString();
+if(dayStr.length < 2) {
+	dayStr = '0' + dayStr;
+}
+var dateStrPartial = [yearStr,monthStr,dayStr].join('_') + '_';
+
+var osForOutputFileName = {
+	'darwin': 'mac',
+	'win32': 'win',
+	'linux': 'linux',
+}[buildOS];
+
+var archForOutputFileName = {
+	'x64': '64',
+	'ia32': '32',
+}[process.arch];
+var osStrPartial = osForOutputFileName + archForOutputFileName;
+var outputFileName = k3StrPartial + dateStrPartial + osStrPartial;
+console.log('running app', outputFileName);
 
 var k3Path = {
-	'darwin': path.join(cwd, 'ljswitchboard-builder','output','Kipling.app'),
-	'win32': path.join(cwd, 'ljswitchboard-builder','output','Kipling.exe'),
-	'linux': path.join(cwd, 'ljswitchboard-builder','output','Kipling'),
+	'darwin': path.join(cwd, 'ljswitchboard-builder',outputFileName,'Kipling.app'),
+	'win32': path.join(cwd, 'ljswitchboard-builder',outputFileName,'Kipling.exe'),
+	'linux': path.join(cwd, 'ljswitchboard-builder',outputFileName,'Kipling'),
 }[buildOS];
 
 var osExecFunc = {

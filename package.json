@@ -26,7 +26,9 @@
     "prep_for_dev": "DO_NOT_RUN node prep_for_dev.js",
     "prep_for_dist": "node prep_for_dist.js",
     "prep_and_build": "node prep_and_build.js",
-    "run_built_k3": "node run_built_k3.js"
+    "run_built_k3": "node run_built_k3.js",
+    "prep_build_and_run": "node prep_build_and_run.js",
+    "build": "node prep_build_and_run.js"
   },
   "repository": {
     "type": "git",
