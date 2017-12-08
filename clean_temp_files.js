@@ -15,7 +15,6 @@
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
-var fse = require('fs-extra');
 var async = require('async');
 
 // Globals
