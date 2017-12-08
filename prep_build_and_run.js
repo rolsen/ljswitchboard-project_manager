@@ -5,6 +5,7 @@ var async = require('async');
 var q = require('q');
 var path = require('path');
 var child_process = require('child_process');
+var fse = require('fs-extra');
 
 
 
@@ -15,12 +16,29 @@ function getCWD(cmd) {
 		return process.cwd();
 	}
 }
+
+var buildOS = {
+	'darwin': 'darwin',
+	'win32': 'win32'
+}[process.platform];
+if(typeof(buildOS) === 'undefined') {
+	buildOS = 'linux';
+}
+
+var localK3FilesPath = {
+	win32: 'C:\\ProgramData\\LabJack\\K3',
+	darwin: '/usr/local/share/LabJack',
+	linux:  '/usr/local/share/LabJack',
+}[buildOS];
+
 var npmCommands = [
 	'git_pull_core',
 	// 'clean_core',
 	// 'setup_core_dist',
 	'node ./build_scripts/build_project.js',
-	'run_built_k3'
+	'clean_temp_files',
+	'run_built_k3',
+
 ];
 
 var commands = [];
