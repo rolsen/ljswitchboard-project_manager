@@ -5,7 +5,6 @@ var async = require('async');
 var q = require('q');
 var path = require('path');
 var child_process = require('child_process');
-var fse = require('fs-extra');
 
 
 
