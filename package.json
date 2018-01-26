@@ -28,7 +28,8 @@
     "prep_and_build": "node prep_and_build.js",
     "run_built_k3": "node run_built_k3.js",
     "prep_build_and_run": "node prep_build_and_run.js",
-    "build": "node prep_build_and_run.js"
+    "build": "node prep_build_and_run.js",
+    "build_project": "node prep_build_and_run.js"
   },
   "repository": {
     "type": "git",
