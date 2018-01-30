@@ -5,24 +5,20 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    
     "setup": "node setup.js",
     "setup_all": "node setup_all.js",
     "setup_core_dist": "node setup_core_dist.js",
     "setup_core_dev": "node setup_core_dev.js",
     "update": "node update.js",
-    
     "clean_core": "node clean_core.js",
+    "clean_temp_files": "node clean_temp_files.js",
     "rm_r_node_modules": "node rm_r_node_modules.js",
-
     "checkout_master": "node checkout_master.js",
     "git_pull": "node git_pull.js",
     "git_pull_core": "node git_pull_core.js",
     "git_push": "node git_push.js",
     "git_status": "node git_status.js",
-
     "start": "node start_kipling.js",
-
     "prep_for_dev": "DO_NOT_RUN node prep_for_dev.js",
     "prep_for_dist": "node prep_for_dist.js",
     "prep_and_build": "node prep_and_build.js",
@@ -43,6 +39,7 @@
   "homepage": "https://github.com/rolsen/ljswitchboard-project_manager",
   "dependencies": {
     "async": "^2.6.0",
+    "fs-extra": "^4.0.3",
     "q": "^1.5.1"
   }
 }
