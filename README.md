@@ -131,12 +131,11 @@ npm run git_pull
 ```
 
 ## Required Node Versions
-Windows users should be using node 6.6.0 as of 8/26/2015
-Mac & Linux users should be using io.js 6.6.0 as of 8/26/2015
-these versions are likely to change.  
-running "nave.sh"
+As of 2/22/2018, Windows/Mac/Linux users should be using node.js 6.6.0. This version is likely to change to newer versions over time.  A nice tool to install node on mac/linux computers is a script called "nave".  Instructions are included below:
 
-### Useful tool for installing node on Mac & Linux
+## Running "nave.sh"
+
+"nave.sh" is a useful tool for installing node on Mac & Linux.
 ```bash
 wget https://raw.github.com/isaacs/nave/master/nave.sh
 sudo bash nave.sh usemain 0.10.22
