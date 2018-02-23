@@ -5,7 +5,7 @@ This is the Primary Project Repository LabJack's Kipling application.
 # Project Set-Up/Getting Started
 
 1. Install Project Building Dependencies
- Set-up Node, git, and some other things on your computer.  Crrently, Kipling requires that [node.js v6.6.0](https://nodejs.org/en/) is installed on a development computer and is primarily built upon [nwjs v0.12.3](https://nwjs.io/).  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
+ Set-up Node, git, and some other things on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
     1. (windows) Install windows-build-tools using npm.  After installing node.js open a new Powershell window as an admin user (windows key, type powershell, right click, run as admin) and then run the following command:
     ```bash
     > npm install -g windows-build-tools
@@ -48,13 +48,13 @@ npm run git_pull
 ```
 8. Execute the "npm install" instruction in each of the sub-modules.  This can be done with two options:
 	a. In order to set up a computer for development,
-```bash
-npm run setup
-```
+	```bash
+	npm run setup
+	```
 	b. In order to set up a computer with the core components, the bare minimum to be able to run and build the project:
-```bash
-npm run setup-core
-```
+	```bash
+	npm run setup-core
+	```
 9. After the last step has finished (it takes quite a while) tart Kipling by running the command "npm start".
 ```bash
 npm start
