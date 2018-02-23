@@ -6,23 +6,22 @@ This is the Primary Project Repository LabJack's Kipling application.
 
 1. Install Project Building Dependencies
  Set-up Node, git, and some other things on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
-  1. (windows) Install windows-build-tools using npm.  After installing node.js open a new Powershell window as an admin user (windows key, type powershell, right click, run as admin) and then run the following command:
-  ```bash
-  > npm install -g windows-build-tools
-  ```
-  2. (windows) Install node-gyp.  Do this in a command prompt window (windows key, type cmd) with standard user permissions, not admin.
-  ```bash
-  > npm install -g node-gyp
-  ```
-  3. (windows) Configure msvs version
-  ```bash
-  > npm config set msvs_version 2015
-  ```
-  4. (windows) Configure it globally
-  ```bash
-  > npm config set msvs_version 2015 --global
-  ```
-
+    1. (windows) Install windows-build-tools using npm.  After installing node.js open a new Powershell window as an admin user (windows key, type powershell, right click, run as admin) and then run the following command:
+    ```bash
+    > npm install -g windows-build-tools
+    ```
+    2. (windows) Install node-gyp.  Do this in a command prompt window (windows key, type cmd) with standard user permissions, not admin.
+    ```bash
+    > npm install -g node-gyp
+    ```
+    3. (windows) Configure msvs version
+    ```bash
+    > npm config set msvs_version 2015
+    ```
+    4. (windows) Configure it globally
+    ```bash
+    > npm config set msvs_version 2015 --global
+    ```
 2. In order to contribute to the project, please request permissions to edit the repo from someone on the team.
 
 3. Clone this repository: [https://github.com/rolsen/ljswitchboard-project_manager](https://github.com/rolsen/ljswitchboard-project_manager)
