@@ -4,8 +4,8 @@ This is the Primary Project Repository LabJack's Kipling application.
 
 # Project Set-Up/Getting Started
 
--1. Install Project Building Dependencies
-  Set-up Node, git, and (other things?) on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
+1. Install Project Building Dependencies
+ Set-up Node, git, and some other things on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
   1. (windows) Install windows-build-tools using npm.  After installing node.js open a new Powershell window as an admin user (windows key, type powershell, right click, run as admin) and then run the following command:
   ```bash
   > npm install -g windows-build-tools
@@ -18,36 +18,36 @@ This is the Primary Project Repository LabJack's Kipling application.
   ```bash
   > npm config set msvs_version 2015
   ```
-4. (windows) Configure it globally
-```bash
-> npm config set msvs_version 2015 --global
-```
+  4. (windows) Configure it globally
+  ```bash
+  > npm config set msvs_version 2015 --global
+  ```
 
-0. In order to contribute to the project, please request permissions to edit the repo from someone on the team.
+2. In order to contribute to the project, please request permissions to edit the repo from someone on the team.
 
-1. Clone this repository: [https://github.com/rolsen/ljswitchboard-project_manager](https://github.com/rolsen/ljswitchboard-project_manager)
+3. Clone this repository: [https://github.com/rolsen/ljswitchboard-project_manager](https://github.com/rolsen/ljswitchboard-project_manager)
 ```bash
 git clone https://github.com/rolsen/ljswitchboard-project_manager
 ...
 ```
-2. Navigate into the project
+4. Navigate into the project
 ```bash
 cd ljswitchboard-project_manager
 ```
-3. Initialize the git sub-modules
+5. Initialize the git sub-modules
 ```bash
 git submodule init
 git submodule update
 ```
-4. Checkout the master branch for all repositories by running  "git checkout master" in each of the sub-module directories.
+6. Checkout the master branch for all repositories by running  "git checkout master" in each of the sub-module directories.
 ```bash
 npm run checkout_master
 ```
-5. Cpdate all the repositories by running the command "npm run git_pull" in each sub-module directory.
+7. Cpdate all the repositories by running the command "npm run git_pull" in each sub-module directory.
 ```bash
 npm run git_pull
 ```
-6. Execute the "npm install" instruction in each of the sub-modules.  This can be done with two options:
+8. Execute the "npm install" instruction in each of the sub-modules.  This can be done with two options:
 	a. In order to set up a computer for development,
 ```bash
 npm run setup
@@ -56,11 +56,11 @@ npm run setup
 ```bash
 npm run setup-core
 ```
-7. After the last step has finished (it takes quite a while) tart Kipling by running the command "npm start".
+9. After the last step has finished (it takes quite a while) tart Kipling by running the command "npm start".
 ```bash
 npm start
 ```
-8. Basic project Testing
+10. Basic project Testing
 configure the "test" property in the package.json file in side the ljswitchboard-splash_screen project to "true".  Then run the "npm start" command.
 
 #### Short Instructions
