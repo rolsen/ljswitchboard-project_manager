@@ -1,8 +1,8 @@
 # ljswitchboard-project_manager
 
-This is the LabJack Kipling Primary Project Repository
+This is the Primary Project Repository LabJack's Kipling application.
 
-#Project Set-Up/Getting Started
+# Project Set-Up/Getting Started
 
 -1. Install Project Building Dependencies
   Set-up Node, git, and (other things?) on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
@@ -96,7 +96,7 @@ npm start
 ```
 
 
-#Build Steps
+# Build Steps
 After running the project set-up instructions, in the future, people can run the "npm run setup-core" command (step 6.b above), then run the command "npm run prep_build_and_run".
 ```bash
 npm run setup-core
