@@ -1,3 +1,4 @@
+// prep_for_dist.js
 
 // Requirements
 var fs = require('fs');
@@ -11,7 +12,7 @@ var child_process = require('child_process');
 var npmCommands = [
 	'git_pull_core',
 	'clean_core',
-	'setup_core_dev'
+	'setup_core_dist',
 ];
 
 var commands = [];

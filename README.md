@@ -1,8 +1,23 @@
 # ljswitchboard-project_manager
 
-This is the Primary Project Repository LabJack's Kipling application.
+This is the Primary Project Repository for LabJack's Kipling application.
 
-# Project Set-Up/Getting Started
+# Development Setup/Getting Started
+
+#### Short Instructions
+
+```bash
+git clone https://github.com/rolsen/ljswitchboard-project_manager
+cd ljswitchboard-project_manager
+git submodule init
+git submodule update
+npm run checkout_master
+npm run git_pull
+npm run setup
+npm start
+```
+
+#### More Detailed Instructions
 
 1. Install Project Building Dependencies
  Set-up Node, git, and some other things on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
@@ -42,7 +57,7 @@ git submodule update
 ```bash
 npm run checkout_master
 ```
-7. Cpdate all the repositories by running the command "npm run git_pull" in each sub-module directory.
+7. Update all the repositories by running the command "npm run git_pull" in each sub-module directory.
 ```bash
 npm run git_pull
 ```
@@ -55,50 +70,19 @@ npm run git_pull
 	```bash
 	npm run setup-core
 	```
-9. After the last step has finished (it takes quite a while) tart Kipling by running the command "npm start".
+9. After the last step has finished (it takes quite a while) start Kipling by running the command "npm start".
 ```bash
 npm start
 ```
-10. Basic project Testing
-configure the "test" property in the package.json file in side the ljswitchboard-splash_screen project to "true".  Then run the "npm start" command.
+10. Optionally, enable [testing mode](#test-mode).
 
-#### Short Instructions
-More verbose short instruction version
-```bash
-echo 'clone the repo'
-git clone https://github.com/rolsen/ljswitchboard-project_manager
-echo 'navigate into the created folder'
-cd ljswitchboard-project_manager
-echo 'run some basic git commands'
-git submodule init
-git submodule update
-echo 'checkout the master branch for all repositories'
-npm run checkout_master
-echo 'update all the repositories'
-echo 'It is time to get coffee.'
-npm run git_pull
-echo 'It is time to get a donut.'
-npm run setup-core
-echo 'Starting Kipling'
-npm start
-```
-Less fun instructions...
-```bash
-git clone https://github.com/rolsen/ljswitchboard-project_manager
-cd ljswitchboard-project_manager
-git submodule init
-git submodule update
-npm run checkout_master
-npm run git_pull
-npm run setup-core
-npm start
-```
+11. Run `npm start`
 
 
 # Build Steps
-After running the project set-up instructions, in the future, people can run the "npm run setup-core" command (step 6.b above), then run the command "npm run prep_build_and_run".
+After running the above setup instructions, you can run the "npm run setup" command (or `npm run setup-core`), then run the command "npm run prep_build_and_run".
 ```bash
-npm run setup-core
+npm run setup
 npm run prep_build_and_run
 ```
 
@@ -108,27 +92,13 @@ Once the subrepositories of `ljswitchboard-project_manager` have been updated (c
 
 If steps of the above build process fail, these are some extra descriptions and another list of commands that can be run:
 1. Run "git pull" to update the project manager.
-1. Make sure the proper version of node.js is installed.  Ihe x-io_manager has a node.js binary it is programmed to use.  Make sure the build computer has the same version as the io_manager, the node binary file is located in the folder ljswitchboard-io_manager/node_binaries.  These are just coppies of the binaries from node.js.  I wasn't sure how to properly include these into a repository & link them to node itself.
-2. run "npm run git_pull" to update each of the modules.  If necessary, run "npm run checkout_master".
-3. run "npm run rm_r_node_modules" to delete all sub-module's node_modules folders.
-4. run "npm run setup" to install all of the sub-modules.
+2. Make sure the proper version of node.js is installed.  Ihe x-io_manager has a node.js binary it is programmed to use.  Make sure the build computer has the same version as the io_manager. The node binary file is located in the folder ljswitchboard-io_manager/node_binaries.  These are just copies of the binaries from node.js.  Perhaps there is a better way to properly include these into a repository & link them to node itself; suggestions welcome.
+3. run "npm run git_pull" to update each of the modules.  If necessary, run "npm run checkout_master".
+4. run "npm run rm_r_node_modules" to delete all sub-module's node_modules folders.
+5. run "npm run setup" to install all of the sub-modules.
  - You should probably go get beer at this point.  This takes a while...
-5. Navigate into the ljswitchboard-build directory and run "npm run build_project" to build the project.  The output files will exist in the /output folder.
+6. Navigate into the ljswitchboard-build directory and run "npm run build_project" to build the project.  The output files will exist in the /output folder.
 
-## Getting Started
-
-```bash
-cd ljswitchboard-project_manager
-git submodule init
-echo 'It is time to get coffee.'
-git submodule update
-echo 'It is time to get a donut.'
-npm run setup
-echo 'checkout the master branch for all repositories'
-npm run checkout_master
-echo 'update all the repositories'
-npm run git_pull
-```
 
 ## Required Node Versions
 As of 2/22/2018, Windows/Mac/Linux users should be using node.js 6.6.0. This version is likely to change to newer versions over time.  A nice tool to install node on mac/linux computers is a script called "nave".  Instructions are included below:
@@ -144,7 +114,7 @@ sudo bash nave.sh usemain 0.10.22
 ## Building & Releasing (12/1/2017)
 1. git pull // update -project_manager
 2. npm run build // runs git_pull_core, prep_build_and_run
-3. When finished will launch the built version of Kipling.  A compressed version of Kipling is also created and is ready to be uploaded to github for release.
+When finished, this will launch the built version of Kipling.  A compressed version of Kipling is also created and is ready to be uploaded to github for release.
 
 ### Debugging building.
 If things aren't working properly, run:
@@ -154,56 +124,47 @@ If things aren't working properly, run:
 
 
 ## Kipling Core projects/folders:
-ljswitchboard-splash_screen"
-ljswitchboard-core"
-ljswitchboard-io_manager"
-ljswitchboard-kipling"
-ljswitchboard-module_manager"
+```
+ljswitchboard-splash_screen
+ljswitchboard-core
+ljswitchboard-io_manager
+ljswitchboard-kipling
+ljswitchboard-module_manager
 ljswitchboard-static_files
-
+```
 
 ## Available commands:
 
-"npm run setup_all": loops through all folders and executes "npm install"
-"npm run setup": loops through core projects and executes "npm install"
-"npm run setup_core_dev": loops through core projects and executes "npm install"
-"npm run setup_core_dist": loops through core projects and executes "npm install --production"
-- Note: setting up ljswitchboard-io_manager takex 100+ seconds on windows.
-"npm run git_pull_core": loops through core projects and executes "git pull"
-"npm run clean_core": loops through core folders and executes "rm -r node_modules"
-"npm run build_k3": runs the build script in the ljswitchboard-builder project.
-
-"npm run prep_for_dist": runs "git_pull_core", "clean_core", and "setup_core_dist".
-"npm run prep_and_build": runs "git_pull_core", "clean_core", "setup_core_dist", and "build_k3".
-
-"npm run run_built_k3": runs the created K3 .exe
+- "npm run setup_all": loops through all folders and executes "npm install"
+- "npm run setup": loops through core projects and executes "npm install"
+- "npm run setup_core_dev": loops through core projects and executes "npm install"
+- "npm run setup_core_dist": loops through core projects and executes "npm install --production"
+    - Note: setting up ljswitchboard-io_manager takes 100+ seconds on windows.
+- "npm run git_pull_core": loops through core projects and executes "git pull"
+- "npm run clean_core": loops through core folders and executes "rm -r node_modules"
+- "npm run build_k3": runs the build script in the ljswitchboard-builder project.
+- "npm run prep_for_dist": runs "git_pull_core", "clean_core", and "setup_core_dist".
+- "npm run prep_and_build": runs "git_pull_core", "clean_core", "setup_core_dist", and "build_k3".
+- "npm run run_built_k3": runs the created K3 .exe
 
 
 
+# Development
 
 
+### <a name="test-mode"></a>Test Mode
 
-## Development
-
-
-### Test mode
-
-To enter test mode, change `test' in ljswitchboard-project_manager/ljswitchboard-splash_screen/package.json to true. This will:
+To enter test mode, change "test" in ljswitchboard-project_manager/ljswitchboard-splash_screen/package.json to true. This will:
  - provide mock device connections
  - disable the cache, so that essentially all you need to do make a change is to edit a file and reload the module by clicking on it again. (E.g. just click on the Settings module on the left side of the Kipling window.)
  - uses the data folder `LabJack/K3_DEV` instead of `LabJack/K3`
-
-
-### Running Kipling
-
-`npm start`
 
 
 ### Things to remember:
 
 When you haven't done much development on a computer and need to catch up that development environment
 
-1. perform `git fetch`/`git pull` on the package manager repo
+1. perform `git fetch`/`git pull` on this project_manager repo
 2. perform `git status` to see what has been changed/what is old.
 3. perform `npm run checkout_master` to get all sub-repos to checkout the master branch.
 4. perform `npm run git_pull` to instruct all sub-repos to update themselves.
@@ -216,7 +177,7 @@ When you haven't done much development on a computer and need to catch up that d
 ## Common issues with node:
 
 When running the command `npm run update` a lot of packages fail to be upgraded due to EACCESS errors
-1. Try navigating to `home/[username]/.npm` and running `sudo chown -R [username] ./` to make sure that npm has access to edit the files.
+1. Try running `sudo chown -R [username] /home/[username]/.npm` to make sure that npm has access to edit the files.
 
 ## Other documents
 Some extra installation & setup instructions:
@@ -226,10 +187,7 @@ A document with some of the priorities & todos:
 https://docs.google.com/document/d/1l7COOy2fvlj_OOyijTg_mQJZJnLCLZDThMRwGygTTTQ/edit?usp=sharing
 
 
-### Upgrading to nodejs version 5.x.x
-Making this move primarily to get a flatter node_modules directory to prevent the long path issues on windows.
-
-####mac:
+#### macOS:
 Current development takes place primarily on a 10.8.5 Mac OS X machine.  I needed to install xcode 5.1.1:
 https://teamtreehouse.com/community/installing-xcode-on-1085-mac
 

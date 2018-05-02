@@ -1,33 +1,10 @@
-
-/*
- * Setup.js is a file that helps initialize the kipling development environment
- * for developers wanting to contribute to the project.  This specific script
- * goes into each folder and performs the commands "npm install" and "npm dedupe"
- * to automate the installation of each projects dependencies.
- *
- * Dependencies:
- *     1. io.js version 1.2.0
- *     2. npm
- *     3. git
- */
+// git_status.js
 
 // Requirements
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
 
-// Globals
-// var NODE_VERSION = 'v1.2.0';
-var NWJS_VERSION = '0.12.1';
-
-
-// It is required that anode/io.js version with child_process.execSync implemented
-if(typeof(child_process.execSync) !== 'function') {
-	console.log('Please install a version of node/io.js with child_process.execSync');
-	process.exit();
-}
-
-try {
 
 // Get a listing of the folders & files in the current directory.
 var currentFiles = fs.readdirSync('.');
@@ -48,10 +25,10 @@ var installationStates = [];
 currentFolders.forEach(function(folder) {
 	installationStates.push({
 		'folder': folder,
-		'isInstalled': false,
-		'isDeduped': false,
+		'isCheckedOut': false,
 		'isFinished': false,
-		'isSuccessful': false
+		'isSuccessful': false,
+		'output': ''
 	});
 });
 
@@ -72,10 +49,33 @@ function printStatus() {
 		for(var i = 0; i < numExtraSpaces; i++) {
 			message += ' ';
 		}
-		message += '\t| ' + install.isInstalled.toString();
-		message += '\t| ' + install.isDeduped.toString();
+		message += '\t| ' + install.isCheckedOut.toString();
 		message += '\t| ' + install.isSuccessful.toString();
 		message += '\t| ' + install.isFinished.toString();
+
+		var appendOutput = false;
+		var isUpToDate = false;
+		if(install.output.indexOf('Your branch is up-to-date') >= 0) {
+			isUpToDate = true;
+		}
+		if(isUpToDate) {
+			message += '\t| true';
+		} else {
+			message += '\t| false';
+			appendOutput = true;
+		}
+
+		var availableChanges = false;
+		if(install.output.indexOf('Changes not staged for commit') >= 0) {
+			message += '\t| true';
+			appendOutput = true;
+		} else {
+			message += '\t| false';
+		}
+		
+		if(appendOutput) {
+			message += '\r\n' + install.output;
+		}
 		// message += '|' + nameSize.toString();
 		messages.push(message);
 	});
@@ -89,10 +89,12 @@ function printStatus() {
 	for(var i = 0; i < (minSize - headerLen); i++) {
 		headerMessage += ' ';
 	}
-	headerMessage += '\t| inst.';
-	headerMessage += '\t| dedup';
+	headerMessage += '\t| chk';
 	headerMessage += '\t| succ';
 	headerMessage += '\t| fin';
+	headerMessage += '\t| old';
+	headerMessage += '\t| changes';
+	
 	console.log(headerMessage);
 	messages.forEach(function(message) {
 		console.log(message);
@@ -104,14 +106,14 @@ function updateStatus(name, options) {
 			if(typeof(options.isFinished) !== 'undefined') {
 				install.isFinished = options.isFinished;
 			}
-			if(typeof(options.isInstalled) !== 'undefined') {
-				install.isInstalled = options.isInstalled;
-			}
-			if(typeof(options.isDeduped) !== 'undefined') {
-				install.isDeduped = options.isDeduped;
+			if(typeof(options.isCheckedOut) !== 'undefined') {
+				install.isCheckedOut = options.isCheckedOut;
 			}
 			if(typeof(options.isSuccessful) !== 'undefined') {
 				install.isSuccessful = options.isSuccessful;
+			}
+			if(typeof(options.output) !== 'undefined') {
+				install.output = options.output;
 			}
 		}
 	});
@@ -128,13 +130,10 @@ currentFolders.forEach(function(folder) {
 
 	// Perform npm install command
 	// console.log('Processing: ', folder);
-	// console.log('  - Installing');
 	try {
-		var installOutput = child_process.execSync('npm install');
-		updateStatus(folder, {isInstalled: true});
-		// console.log('  - Deduping');
-		var dedupeOutput = child_process.execSync('npm dedupe');
-		updateStatus(folder, {isDeduped: true, isSuccessful: true, isFinished: true});
+		var installOutput = child_process.execSync('git status');
+		console.log(installOutput.toString());
+		updateStatus(folder, {isCheckedOut: true, isSuccessful: true, isFinished: true, output: installOutput.toString()});
 	} catch(err) {
 		console.log('Error!!!');
 		updateStatus(folder, {isSuccessful: false, isFinished: true});
@@ -143,22 +142,3 @@ currentFolders.forEach(function(folder) {
 	// Navigate back to the starting directory
 	process.chdir(startingDir);
 });
-
-// Install node-webkit
-console.log('Installing nw version:', NWJS_VERSION);
-var startingDir = process.cwd();
-var builderDir = path.join(startingDir, 'ljswitchboard-builder');
-process.chdir(builderDir);
-try {
-	var nwInstallOut = child_process.execSync('npm install nw@' + NWJS_VERSION);
-	console.log('Successfully installed nw');
-} catch(err) {
-	console.log('Error Installing nw');
-}
-process.chdir(startingDir);
-
-
-
-} catch(err) {
-	console.error('Error', err);
-}
