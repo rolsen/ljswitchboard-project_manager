@@ -164,22 +164,19 @@ ljswitchboard-static_files
 
 
 ## Available commands:
+Project Set-up:
+* "npm run setup_all": loops through all folders and executes "npm install"
+* "npm run setup": loops through core projects and executes "npm install"
+* "npm run setup_core_dev": loops through core projects and executes "npm install"
+* "npm run setup_core_dist": loops through core projects and executes "npm install --production".  Note: setting up ljswitchboard-io_manager takes a while on windows due to building some native node modules.  It also downloads nwjs when in the -splash_screen project.
 
-"npm run setup_all": loops through all folders and executes "npm install"
-"npm run setup": loops through core projects and executes "npm install"
-"npm run setup_core_dev": loops through core projects and executes "npm install"
-"npm run setup_core_dist": loops through core projects and executes "npm install --production"
-- Note: setting up ljswitchboard-io_manager takex 100+ seconds on windows.
-"npm run git_pull_core": loops through core projects and executes "git pull"
-"npm run clean_core": loops through core folders and executes "rm -r node_modules"
-"npm run build_k3": runs the build script in the ljswitchboard-builder project.
-
-"npm run prep_for_dist": runs "git_pull_core", "clean_core", and "setup_core_dist".
-"npm run prep_and_build": runs "git_pull_core", "clean_core", "setup_core_dist", and "build_k3".
-
-"npm run run_built_k3": runs the created K3 .exe
-
-
+Building and cleaning
+* "npm run git_pull_core": loops through core projects and executes "git pull"
+* "npm run clean_core": loops through core folders and executes "rm -r node_modules"
+* "npm run build_k3": runs the build script in the ljswitchboard-builder project.
+* "npm run prep_for_dist": runs "git_pull_core", "clean_core", and "setup_core_dist".
+* "npm run prep_and_build": runs "git_pull_core", "clean_core", "setup_core_dist", and "build_k3".
+* "npm run run_built_k3": runs the created K3 .exe
 
 
 
