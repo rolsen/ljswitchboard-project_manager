@@ -50,11 +50,11 @@ npm run git_pull
 8. Execute the "npm install" instruction in each of the sub-modules.  This can be done with two options:
 	a. In order to set up a computer for development,
 	```bash
-	npm run setup
+	npm run setup_all
 	```
 	b. In order to set up a computer with the core components, the bare minimum to be able to run and build the project:
 	```bash
-	npm run setup-core
+	npm run setup
 	```
 9. After the last step has finished (it takes quite a while) tart Kipling by running the command "npm start".
 ```bash
@@ -79,7 +79,7 @@ echo 'update all the repositories'
 echo 'It is time to get coffee.'
 npm run git_pull
 echo 'It is time to get a donut.'
-npm run setup-core
+npm run setup
 echo 'Starting Kipling'
 npm start
 ```
@@ -91,15 +91,15 @@ git submodule init
 git submodule update
 npm run checkout_master
 npm run git_pull
-npm run setup-core
+npm run setup
 npm start
 ```
 
 
 # Build Steps
-After running the project set-up instructions, in the future, people can run the "npm run setup-core" command (step 6.b above), then run the command "npm run prep_build_and_run".
+After running the project set-up instructions, in the future, people can run the "npm run setup" command (step 6.b above), then run the command "npm run prep_build_and_run".
 ```bash
-npm run setup-core
+npm run setup
 npm run prep_build_and_run
 ```
 
