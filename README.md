@@ -56,7 +56,7 @@ npm run git_pull
 	```bash
 	npm run setup
 	```
-9. After the last step has finished (it takes quite a while) tart Kipling by running the command "npm start".
+9. After the last step has finished (it takes quite a while) sart Kipling by running the command "npm start".
 ```bash
 npm start
 ```
@@ -177,6 +177,7 @@ Building and cleaning
 * "npm run prep_for_dist": runs "git_pull_core", "clean_core", and "setup_core_dist".
 * "npm run prep_and_build": runs "git_pull_core", "clean_core", "setup_core_dist", and "build_k3".
 * "npm run run_built_k3": runs the created K3 .exe
+* "npm run prep_build_and_run": Runs "git_pull_core" to update core project repos.  Runs the build command in the -builder project.  And then launches the built version of Kipling.
 
 
 
