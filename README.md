@@ -5,20 +5,21 @@ This is the Primary Project Repository LabJack's Kipling application.
 # Project Set-Up/Getting Started
 
 1. Install Project Building Dependencies
- Set-up Node, git, and some other things on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  The first few following steps are windows only.
-    1. **(windows)** Install windows-build-tools using npm.  After installing node.js open a new Powershell window as an admin user (windows key, type powershell, right click, run as admin) and then run the following command:
+ Set-up Node, git, and some other things on your computer.  LJ-ers, check out the QMS-xxx~new computer for details.  Others, feel free to email us and we can make a public document.  After the first step, the next few steps are windows only.
+    1. All Operating Systems.  Download and install the appropriate version of the [LJM library](https://labjack.com/support/software/installers/ljm) from LabJack's website using the appropriate installer for your system.  
+    2. **(windows)** Install windows-build-tools using npm.  After installing node.js open a new Powershell window as an admin user (windows key, type powershell, right click, run as admin) and then run the following command:
     ```bash
     > npm install -g windows-build-tools
     ```
-    2. **(windows)** Install node-gyp.  Do this in a command prompt window (windows key, type cmd) with standard user permissions, not admin.
+    3. **(windows)** Install node-gyp.  Do this in a command prompt window (windows key, type cmd) with standard user permissions, not admin.
     ```bash
     > npm install -g node-gyp
     ```
-    3. **(windows)** Configure msvs version
+    4. **(windows)** Configure msvs version
     ```bash
     > npm config set msvs_version 2015
     ```
-    4. **(windows)** Configure it globally
+    5. **(windows)** Configure it globally
     ```bash
     > npm config set msvs_version 2015 --global
     ```
