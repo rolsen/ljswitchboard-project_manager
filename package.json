@@ -1,33 +1,40 @@
 {
   "name": "ljswitchboard-project_manager",
-  "version": "0.0.1",
-  "description": "A project to help developers of LabJack's \"Kipling\" program.",
+  "version": "0.1.0",
+  "description": "Orchestrate the modules that comprise LabJack's \"Kipling\" program.",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "node scripts/setup.js",
-    "setup_all": "node scripts/setup_all.js",
-    "setup_core_dist": "node scripts/setup_core_dist.js",
-    "setup_core_dev": "node scripts/setup.js",
-    "update": "node scripts/update.js",
-    "clean_core": "node scripts/clean_core.js",
+    "build": "node scripts/prep_build_and_run.js",
+    "checkout_master": "node main.js do -- git checkout master",
+    "clean": "node main.js do -- rm -r node_modules",
+    "clean_core": "node main.js --which=core do -- rm -r node_modules",
     "clean_temp_files": "node scripts/clean_temp_files.js",
-    "rm_r_node_modules": "node scripts/rm_r_node_modules.js",
-    "checkout_master": "node scripts/checkout_master.js",
-    "git_pull": "node scripts/git_pull.js",
-    "git_pull_core": "node scripts/git_pull_core.js",
-    "git_push": "node scripts/git_push.js",
-    "git_status": "node scripts/git_status.js",
-    "start": "node scripts/start_kipling.js",
-    "prep_for_dist": "node scripts/prep_for_dist.js",
+    "exec_all": "node main.js do --",
+    "git_pull": "node main.js do -- git pull",
+    "git_pull_core": "node main.js --which=core do -- git pull",
+    "git_push": "node main.js do -- git push",
+    "git_status": "node main.js --no-summary_out -i '^## master...origin/master\n$' --ignore_message=\"up to date\" do -c \"git status --short --branch\"",
+    "initialize": "node scripts/initialize.js",
+    "list_submodules": "node main.js list",
     "prep_and_build": "node scripts/prep_and_build.js",
+    "prep_for_dist": "node scripts/prep_for_dist.js",
     "run_built_k3": "node scripts/run_built_k3.js",
-    "build": "node scripts/prep_build_and_run.js"
+    "setup_core": "node main.js --which=core do -- npm install && npm dedupe",
+    "setup": "node main.js do -- npm install && npm dedupe",
+    "setup_core_dev": "node main.js --which=core do -- npm install && npm dedupe",
+    "setup_core_dist": "node main.js --which=core do -- npm install --production && npm dedupe",
+    "start": "node scripts/start_kipling.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "node main.js do -- npm update && npm dedupe"
   },
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/rolsen/ljswitchboard-project_manager"
   },
-  "author": "",
+  "author": {
+    "name": "Chris Johnson",
+    "url": "https://labjack.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rolsen/ljswitchboard-project_manager/issues"
@@ -36,10 +43,9 @@
   "dependencies": {
     "async": "^2.6.0",
     "fs-extra": "^4.0.3",
-    "q": "^1.5.1"
-  },
-  "devDependencies": {
     "grunt": "^1.0.2",
-    "grunt-contrib-jshint": "^1.1.0"
+    "grunt-contrib-jshint": "^1.1.0",
+    "q": "^1.5.1",
+    "yargs": "^11.0.0"
   }
 }

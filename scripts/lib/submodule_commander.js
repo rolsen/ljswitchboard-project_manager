@@ -1,28 +1,36 @@
 // submodule_commander.js
-// Manage multiple git submodules; e.g. run a command in each submodule.
-// All functions must be executed from the repo that contains the submodules.
 "use strict";
 
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
 
-exports.SubmoduleCommander = class SubmoduleCommander {
-    // which_sm: Which submodules
-    constructor(which_sm) {
-        which_sm = (typeof which_sm !== 'undefined') ?  which_sm : 'all';
+// Utility class SubmoduleCommander to help execute a command in multiple
+// submodules.
+class SubmoduleCommander {
+    constructor(argv) {
+        this.argv = argv;
 
-        if (which_sm === 'all') {
+        var which = this.argv.which;
+        if (Array.isArray(this.argv.which)) {
+            which = this.argv.which[this.argv.which.length - 1];
+        }
+        if (which === 'all') {
             this.submodules = exports.getAllSubmodules();
         }
-        else if (which_sm === 'core') {
+        else {
             this.submodules = exports.getCoreSubmodules();
         }
+
+        this.ignoredCount = 0;
     }
 
-    // Executes the given command in each of the submodules then prints a summary.
-    // command: The shell command to execute
-    commandSubmodules(command) {
+    // Executes the given command in each of the submodules.
+    commandSubmodules() {
+        if (this.argv.hidden_debug) {
+            console.log('this.argv ', this.argv);
+        }
+
         var repoStatuses = {};
         this.submodules.forEach(function(folder) {
             repoStatuses[folder] = {
@@ -36,37 +44,66 @@ exports.SubmoduleCommander = class SubmoduleCommander {
             var workDir = path.join(startingDir, folder);
             process.chdir(workDir);
 
-            console.log(workDir);
-
             try {
-                var output = child_process.execSync(command);
-                // console.log('output', output.toString());
+                var output = child_process.execSync(this.argv.command);
+                this.conditionallyOutput(workDir, output);
                 repoStatuses[folder].isSuccessful = true;
-            } catch(err) {
-                console.log('Error!!!');
+            } catch (err) {
+                console.log(`Error in ${workDir}`);
+                if (this.argv.hidden_debug) {
+                    console.log(err);
+                }
                 repoStatuses[folder].isSuccessful = false;
             }
 
             // Navigate back to the starting directory
             process.chdir(startingDir);
-        });
+        }, this);
 
-        printStatuses(repoStatuses);
+        if (this.argv.summary_out) {
+            printStatuses(repoStatuses);
+        }
+        if (!this.argv.quiet && this.ignoredCount !== 0) {
+            console.log(`${this.ignoredCount} submodules of ${this.submodules.length} were ${this.argv.ignore_message}`);
+        }
     }
-};
+
+    conditionallyOutput(workDir, output) {
+        if (this.argv.quiet) {
+            return;
+        }
+
+        var outstr = output.toString();
+        if (this.argv.ignore && RegExp(this.argv.ignore).test(outstr)) {
+            this.ignoredCount += 1;
+            return;
+        }
+
+        if (this.argv.dir_out) {
+            console.log(workDir);
+        }
+
+        if (this.argv.command_out) {
+            console.log(outstr);
+        }
+    }
+}
+exports.SubmoduleCommander = SubmoduleCommander;
 
 // Return the path of each submodule, whether or not submodules are initialized.
 // Returns something like:
 //     ['ljswitchboard-builder', 'subdirectory/other_submodule']
-exports.getAllSubmodules = function() {
+exports.getAllSubmodules = getAllSubmodules;
+function getAllSubmodules() {
     // https://stackoverflow.com/questions/12641469/list-submodules-in-a-git-repository
     var submodules = child_process.execSync(
         "git config --file .gitmodules --get-regexp path | awk '{ print $2 }'"
     );
     return submodules.toString().split('\n').filter(word => word.length > 0);
-};
+}
 
-exports.getCoreSubmodules = function() {
+exports.getCoreSubmodules = getCoreSubmodules;
+function getCoreSubmodules() {
     var ljswitchboardBuilderPackageInfo = require('../../ljswitchboard-builder/package.json');
     var currentFiles = ljswitchboardBuilderPackageInfo.kipling_dependencies;
     var ignoredFolders = ['.git'];
@@ -82,7 +119,7 @@ exports.getCoreSubmodules = function() {
         return isDir && !isIgnored;
     });
     return currentFolders;
-};
+}
 
 // Print the progress and success/fail state of all subrepos
 var printStatuses = function(completionStates) {

@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/sh - deprecated
+
 clear #clears the command line screen
 
 while true; do
