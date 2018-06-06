@@ -1,1 +1,3 @@
-node_modules/**
+**/node_modules/**
+ljswitchboard-builder/temp_extract_test_dir/**
+ljswitchboard-builder/temp_project_files/**
