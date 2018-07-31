@@ -23,7 +23,7 @@
     "setup": "node main.js do -- npm install && npm dedupe",
     "setup_core_dev": "node main.js --which=core do -- npm install && npm dedupe",
     "setup_core_dist": "node main.js --which=core do -- npm install --production && npm dedupe",
-    "start": "node scripts/start_kipling.js",
+    "start": "cd ljswitchboard-splash_screen && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "node main.js do -- npm update && npm dedupe"
   },
