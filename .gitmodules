@@ -70,9 +70,6 @@
 [submodule "ljm-shell_logger"]
 	path = ljm-shell_logger
 	url = https://github.com/chrisJohn404/ljm-shell_logger
-[submodule "node-ljm"]
-	path = node-ljm
-	url = ./node-ljm
 [submodule "kipling-cli"]
 	path = kipling-cli
 	url = https://github.com/chrisJohn404/kipling-cli

@@ -1,3 +1,5 @@
+// This is an obsolete script
+
 
 // Requirements
 var fs = require('fs');
@@ -11,7 +13,7 @@ var child_process = require('child_process');
 var npmCommands = [
 	'git_pull_core',
 	'clean_core',
-	'setup_core_dist',
+	'setup_core_dev'
 ];
 
 var commands = [];
