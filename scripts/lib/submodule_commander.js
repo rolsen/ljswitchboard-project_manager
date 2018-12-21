@@ -91,16 +91,31 @@ class SubmoduleCommander {
 }
 exports.SubmoduleCommander = SubmoduleCommander;
 
+
 // Return the path of each submodule, whether or not submodules are initialized.
 // Returns something like:
 //     ['ljswitchboard-builder', 'subdirectory/other_submodule']
 exports.getAllSubmodules = getAllSubmodules;
 function getAllSubmodules() {
+    // var gitConfigFilePath = path.join(process.cwd(),)
+    var gitConfigFilePath = path.resolve(path.join(__dirname, '..', '..', '.git', 'config'));
+    var fileData = fs.readFileSync(gitConfigFilePath).toString();
+
+    var SUBMODULE_REGEX = /(?:\[submodule \").*(?:\"\])/g
+    var match = SUBMODULE_REGEX.exec(fileData);
+    var libs = [];
+    while(match != null) {
+        var libStr = match[0].split('[submodule "').join('').split('"]').join('');
+        libs.push(libStr);
+        match = SUBMODULE_REGEX.exec(fileData);
+    }
     // https://stackoverflow.com/questions/12641469/list-submodules-in-a-git-repository
-    var submodules = child_process.execSync(
-        "git config --file .gitmodules --get-regexp path | awk '{ print $2 }'"
-    );
-    return submodules.toString().split('\n').filter(word => word.length > 0);
+    // var submodules = child_process.execSync(
+    //     "git config --file .gitmodules --get-regexp path | awk '{ print $2 }'"
+    // );
+    // return submodules.toString().split('\n').filter(word => word.length > 0);
+    
+    return libs;
 }
 
 exports.getCoreSubmodules = getCoreSubmodules;
