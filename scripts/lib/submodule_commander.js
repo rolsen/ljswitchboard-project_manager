@@ -49,6 +49,7 @@ class SubmoduleCommander {
                 this.conditionallyOutput(workDir, output);
                 repoStatuses[folder].isSuccessful = true;
             } catch (err) {
+                console.log('CMD:',this.argv.command);
                 console.log(`Error in ${workDir}`);
                 if (this.argv.hidden_debug) {
                     console.log(err);
