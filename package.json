@@ -12,6 +12,7 @@
     "exec_all": "node main.js do -c",
     "git_pull": "node main.js do -c \"git pull\"",
     "git_pull_core": "node main.js --which=core do -c \"git pull\"",
+    "git_checkout_core": "node main.js --which=core do -c \"git checkout ./*\"",
     "git_push": "node main.js do -c \"git push\"",
     "git_status": "node main.js --no-summary_out -i \"^## master...origin/master\n$\" --ignore_message=\"up to date\" do -c \"git status --short --branch\"",
     "initialize": "node scripts/initialize.js",
