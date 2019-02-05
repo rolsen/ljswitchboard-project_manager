@@ -91,5 +91,5 @@ var processCli = function(yargs) {
 };
 
 if (typeof require != 'undefined' && require.main==module) {
-    processCli(require('yargs'));
+    var res = processCli(require('yargs'));
 }

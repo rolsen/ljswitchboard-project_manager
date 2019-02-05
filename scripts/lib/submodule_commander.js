@@ -61,11 +61,27 @@ class SubmoduleCommander {
             process.chdir(startingDir);
         }, this);
 
+        var isPassed = true;
+        var failedStr = '';
+        Object.keys(repoStatuses).forEach(function(repoStatusKey) {
+            var repoStatus = repoStatuses[repoStatusKey];
+            if(!repoStatus.isSuccessful) {
+                isPassed = false;
+                failedStr += 'Failed Repo: ' + repoStatus.folder + '\r\n';
+            }
+        });
+
         if (this.argv.summary_out) {
             printStatuses(repoStatuses);
         }
         if (!this.argv.quiet && this.ignoredCount !== 0) {
             console.log(`${this.ignoredCount} submodules of ${this.submodules.length} were ${this.argv.ignore_message}`);
+        }
+
+        if(!isPassed) {
+            console.log('FAILED:');
+            console.log(failedStr);
+            process.exitCode = 1;
         }
     }
 

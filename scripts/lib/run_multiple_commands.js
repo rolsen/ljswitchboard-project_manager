@@ -63,11 +63,18 @@ exports.run_multiple_commands = function(npmCommands) {
     function runCommand(cmd) {
         var defered = q.defer();
 
-        var receivedDisconnectMessage = false;
+        var receivedCloseMessage = false;
         var receivedExitMessage = false;
+        var isError = false;
 
-        function finishFunc() {
-            defered.resolve();
+        function finishFunc(code) {
+            if(receivedExitMessage && receivedCloseMessage) {
+                if(isError) {
+                    defered.reject();
+                } else {
+                    defered.resolve();
+                }
+            }
         }
         function errorListener(data) {
             console.log('in errorListener',data);
@@ -76,11 +83,17 @@ exports.run_multiple_commands = function(npmCommands) {
         function exitListener(data) {
             receivedExitMessage = true;
             console.log('in exitListener',data);
+            if(data !== 0) {
+                isError = true;
+            }
             finishFunc();
         }
         function closeListener(data) {
-            receivedExitMessage = true;
+            receivedCloseMessage = true;
             console.log('in closeListener',data);
+            if(data !== 0) {
+                isError = true;
+            }
             finishFunc();
         }
         function disconnectListener(data) {
@@ -123,12 +136,16 @@ exports.run_multiple_commands = function(npmCommands) {
     var startTime = new Date();
     async.eachSeries(
         commands,
-        function(cmd, cb) {
+        function(cmd, cb, i) {
             console.log('Running command', cmd);
             runCommand(cmd)
             .then(function() {
                 console.log('Finished running command', cmd);
                 cb();
+            }, function(err) {
+                var index = commands.indexOf(cmd);
+                console.log('Failed to run the command:', npmCommands[index]);
+                process.exit(err);
             });
         },
         function(err) {
