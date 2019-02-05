@@ -1,7 +1,7 @@
 // prep_build_and_run.js
 var rmc = require('./lib/run_multiple_commands.js').run_multiple_commands;
 var npmCommands = [
-	'git_checkout_core',
+	// 'git_checkout_core',
 	'git_pull_core',
 	// 'clean_core',
 	// 'setup_core_dist',
