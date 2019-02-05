@@ -19,7 +19,7 @@
     "prep_and_build": "node scripts/prep_and_build.js",
     "prep_for_dist": "node scripts/prep_for_dist.js",
     "run_built_k3": "node scripts/run_built_k3.js",
-    "setup_core": "node main.js --which=core do -c \"npm install && npm dedupe\"",
+    "setup_core": "node main.js --which=core do -c \"npm install && npm update && npm dedupe\"",
     "setup": "node main.js do --dir_out -c \"npm install && npm dedupe\"",
     "setup_core_dev": "node main.js --which=core do -c \"npm install && npm dedupe\"",
     "setup_core_dist": "node main.js --which=core do -c \"npm install --production && npm dedupe\"",
