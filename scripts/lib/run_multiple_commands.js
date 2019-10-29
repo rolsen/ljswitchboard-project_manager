@@ -11,7 +11,7 @@ var child_process = require('child_process');
 
 exports.run_multiple_commands = function(npmCommands) {
     function getCWD(cmd) {
-        if(cmd === 'node ./build_scripts/build_project.js') {
+        if(cmd.indexOf('/build_scripts/') >= 0) {
             return path.join(process.cwd(), 'ljswitchboard-builder');
         } else {
             return process.cwd();
