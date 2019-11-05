@@ -1,0 +1,105 @@
+{
+	// Comments are enabled in this file b/c parsing is
+	// done with "npm cjson".
+	"projects_to_test": [
+		"ljm-ffi",
+		"LabJack-nodejs",
+		"LabJack-process_manager",
+		"lj-apps-win-registry-info",
+		"ljmmm-parse",
+		"ljswitchboard-core",
+		"ljswitchboard-data_parser",
+		"ljswitchboard-device_manager",
+		"ljswitchboard-device_scanner",
+		"ljswitchboard-firmware_verifier",
+		// "ljswitchboard-io_manager",
+		"ljswitchboard-kipling",
+		"ljswitchboard-ljm_device_curator",
+		"ljswitchboard-ljm_device_manager",
+		"ljswitchboard-ljm_driver_checker",
+		"ljswitchboard-ljm_driver_constants",
+		"ljswitchboard-ljm_special_addresses",
+		"ljswitchboard-modbus_map",
+		"ljswitchboard-module_manager",
+		"ljswitchboard-package_loader",
+		"ljswitchboard-require",
+		"ljswitchboard-simple_logger",
+		"ljswitchboard-splash_screen",
+		"ljswitchboard-version_manager"
+	],
+	// "override_projects_to_test": [
+	// 	"LabJack-nodejs"
+	// ],
+	"rando": {
+		"dontdelete": "dontdelete"
+	},
+	"primary_dependencies": {
+		"async": "3.1.0",
+		"q": "1.5.1",
+		"extend": "3.x.x",
+		"ffi": "2.3.0",
+		"ref": "1.3.5",
+		"dict": "1.4.0",
+
+		// Special from lj-apps-win-registry-info
+		"winreg": "1.2.4",
+
+		// Special from ljmmm-parse
+	    // "sprintf-js": ">=0.0.7",
+	    "sprintf-js": "1.x.x",
+		
+		// LabJack Dependency Versions:
+		"labjack-nodejs":"0.0.60",
+		"lj-apps-win-registry-info":"1.0.1",
+		"lj_async_0_to_x_shim":"0.0.1",
+		"ljm-ffi":"1.0.10",
+		"ljmmm-parse":"0.2.1",
+		"ljswitchboard-data_parser":"0.0.52",
+		"ljswitchboard-device_manager":"1.0.0",
+		"ljswitchboard-device_scanner":"0.0.60",
+		"ljswitchboard-firmware_verifier":"0.0.4",
+		"ljswitchboard-ljm_device_curator":"0.1.28",
+		"ljswitchboard-ljm_driver_checker":"0.0.11",
+		"ljswitchboard-ljm_driver_constants":"0.0.39",
+		"ljswitchboard-ljm_special_addresses":"1.0.3",
+		"ljswitchboard-modbus_map":"0.0.18",
+		"ljswitchboard-package_loader":"0.0.20",
+		"ljswitchboard-require":"0.0.4",
+		"ljswitchboard-simple_logger":"0.0.3",
+		"ljswitchboard-version_manager":"0.0.21",
+		"ljswitchboard-window_manager":"0.0.5",
+		"process_manager":"0.0.16"
+	},
+	"git_dependencies": {
+		"labjack-nodejs": "git://github.com/chrisJohn404/labjack-nodejs.git#master",
+		"lj-apps-win-registry-info": "",
+		"lj_async_0_to_x_shim": "",
+		"ljm-ffi": "git://github.com/chrisJohn404/ljm-ffi.git#master",
+		"ljmmm-parse": "git://github.com/chrisJohn404/ljmmm-parse.git#master",
+		"ljswitchboard-data_parser": "git://github.com/chrisJohn404/ljswitchboard-data_parser.git#master",
+		"ljswitchboard-device_manager": "",
+		"ljswitchboard-device_scanner": "",
+		"ljswitchboard-firmware_verifier": "",
+		"ljswitchboard-ljm_device_curator": "",
+		"ljswitchboard-ljm_driver_checker": "",
+        "ljswitchboard-ljm_driver_constants": "git://github.com/chrisJohn404/ljswitchboard-ljm_driver_constants.git#master",
+        "ljswitchboard-ljm_special_addresses": "",
+        "ljswitchboard-modbus_map": "git://github.com/chrisJohn404/ljswitchboard-modbus_map.git#master",
+        "ljswitchboard-package_loader": "",
+        "ljswitchboard-require": "",
+        "ljswitchboard-simple_logger": "",
+        "ljswitchboard-version_manager": "",
+        "ljswitchboard-window_manager": "",
+        "process_manager": "",
+	},
+	"dev_dependencies": {
+		"colors": "1.4.0",
+		"nodeunit": "0.11.3",
+		"diff": ">=3.5.0",
+		"rewire": "4.0.1"
+	},
+	"custDependencies": {
+		"process_manager": "",
+		"LabJack-process_manager": "git://github.com/chrisJohn404/process_manager.git#master"
+	}
+}

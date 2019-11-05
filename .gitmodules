@@ -97,3 +97,6 @@
 [submodule "ljswitchboard-device_manager"]
 	path = ljswitchboard-device_manager
 	url = https://github.com/chrisJohn404/ljswitchboard-device_manager
+[submodule "lj_async_0_to_x_shim"]
+	path = lj_async_0_to_x_shim
+	url = https://github.com/chrisJohn404/lj_async_0_to_x_shim
