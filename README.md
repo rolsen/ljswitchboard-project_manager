@@ -1,3 +1,10 @@
+# ljswitchboard-project_manager has moved
+
+See [github.com/labjack/labjack_kipling](https://github.com/labjack/labjack_kipling)
+
+---
+
+
 # ljswitchboard-project_manager
 
 This is the Primary Project Repository for LabJack's Kipling application.
